@@ -13,17 +13,17 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
-<div class="content-wrapper">
+<div class="content-wrapper" style="background-color:#FFFFFF">
 
-  <section class="content-header">
+  <section class="content-header" style="background-color:#FFFFFF">
     
-    <h1>
+    <h1 style="color:#03A5C2; font-family: monospace; font-weight: bold;">
       
       Reportes de donaciones
     
     </h1>
 
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" style="background-color:#FFFFFF">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -33,11 +33,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
   </section>
 
-  <section class="content">
+  <section class="content" style="background-color:#FFFFFF">
 
-    <div class="box">
+    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
 
-      <div class="box-header with-border">
+      <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;">
 
         <div class="input-group">
 
@@ -91,7 +91,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
          
       </div>
 
-      <div class="box-body">
+      <div class="box-body" style="background-color:#FFFFFF; border: 2px white solid;">
         
         <div class="row">
 
@@ -125,7 +125,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
            </div>
 
-           <div class="col-md-6 col-xs-12">
+           <div class="col-md-6 col-xs-12" >
              
             <?php
 

@@ -1,6 +1,6 @@
-<aside class="main-sidebar"  style="background-color:#ff1493;">
+<aside class="main-sidebar"  style="background-color:white;">
 
-	 <section class="sidebar"  style="background-color:#ff1493;">
+	 <section class="sidebar"  style="background-color:white;">
 
 		<ul class="sidebar-menu"  style="background-color:#ff1493;">
 
@@ -10,7 +10,7 @@
 
 			echo '<li class="active">
 
-				<a href="inicio"  style="background-color:#ff1493;">
+				<a href="inicio"  style="background-color:black;">
 
 					<i class="fa fa-home"></i>
 					<span>Inicio</span>
@@ -21,7 +21,7 @@
 
 			<li>
 
-				<a href="usuarios"  style="background-color:#ff1493;">
+				<a href="usuarios"  style="background-color:#04246E;">
 
 					<i class="fa fa-user"></i>
 					<span>Usuarios</span>
@@ -36,7 +36,7 @@
 
 			echo '<li>
 
-				<a href="categorias"  style="background-color:#ff1493;">
+				<a href="categorias"  style="background-color:#04FA00;color:black;">
 
 					<i class="fa fa-th"></i>
 					<span>Categorías</span>
@@ -62,10 +62,10 @@
 
 			echo '<li>
 
-				<a href="clientes"  style="background-color:#ff1493;">
+				<a href="clientes"  style="background-color:#FFC301;color:black">
 
 					<i class="fa fa-users"></i>
-					<span>Propietario de terreno</span>
+					<span>Beneficiarios</span>
 
 				</a>
 
@@ -77,25 +77,25 @@
 
 			echo '<li class="treeview">
 
-				<a href="#"  style="background-color:#ff1493;">
+				<a href="#"  style="background-color:#03A5C2;">
 
-					<i class="fa fa-list-ul"  style="background-color:#ff1493;"></i>
+					<i class="fa fa-list-ul"  style="background-color:#03A5C2;"></i>
 					
-					<span  style="background-color:#ff1493;">Donaciones</span>
+					<span  style="background-color:#03A5C2;">Donaciones</span>
 					
-					<span class="pull-right-container"  style="background-color:#ff1493;">
+					<span class="pull-right-container"  style="background-color:#03A5C2;">
 					
-						<i class="fa fa-angle-left pull-right"  style="background-color:#ff1493;"></i>
+						<i class="fa fa-angle-left pull-right"  style="background-color:#03A5C2;"></i>
 
 					</span>
 
 				</a>
 
-				<ul class="treeview-menu">
+				<ul class="treeview-menu" style="background-color:#03A5C2;">
 					
 					<li>
 
-						<a href="ventas"  style="background-color:#ff1493;">
+						<a href="ventas"  style="background-color:#03A5C2;">
 							
 							<i class="fa fa-circle-o"></i>
 							<span>Administrar donaciones</span>
@@ -106,7 +106,7 @@
 
 					<li>
 
-						<a href="crear-venta"  style="background-color:#ff1493;">
+						<a href="crear-venta"  style="background-color:#03A5C2;">
 							
 							<i class="fa fa-circle-o"></i>
 							<span>Crear donación</span>
@@ -119,7 +119,7 @@
 
 					echo '<li>
 
-						<a href="reportes"  style="background-color:#ff1493;">
+						<a href="reportes"  style="background-color:#03A5C2;">
 							
 							<i class="fa fa-circle-o"></i>
 							<span>Reporte de donaciones</span>

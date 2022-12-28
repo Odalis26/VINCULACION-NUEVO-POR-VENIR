@@ -18,7 +18,7 @@ if($_SESSION["perfil"] == "Especial"){
 
   <section class="content-header" style="background-color:#FFFFFF">
     
-    <h1 style="color:#867804">
+    <h1 style="color:#ff8c00; font-family: monospace; font-weight: bold;">
       
       Administrar beneficiarios
     

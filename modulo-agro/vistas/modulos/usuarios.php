@@ -17,7 +17,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
   <section class="content-header" style="background-color:#FFFFFF">
     
-    <h1 style="color:#04246E">
+    <h1 style="color:#04246E; font-family: monospace; font-weight: bold;">
       
       Administrar usuarios
     

@@ -17,7 +17,7 @@ if($_SESSION["perfil"] == "Vendedor"){
 
   <section class="content-header" style="background-color:#FFFFFF">
     
-    <h1 style="color:#FA07B0">
+    <h1 style="color:#FA07B0; font-family: monospace; font-weight: bold;">
       
       Administrar productos
     

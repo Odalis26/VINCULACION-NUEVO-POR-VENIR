@@ -18,7 +18,7 @@ if($_SESSION["perfil"] == "Vendedor"){
 
   <section class="content-header"  style="background-color:#FFFFFF">
     
-    <h1 style="color:#116200">
+    <h1 style="color:#228b22; font-family: monospace; font-weight: bold;">
       
       Administrar categorías
     

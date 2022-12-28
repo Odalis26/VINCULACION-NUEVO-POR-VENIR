@@ -27,7 +27,7 @@ if($xml){
 
   <section class="content-header" style="background-color:#FFFFFF">
     
-    <h1 style="color:#FA07B0">
+    <h1 style="color:#03A5C2; font-family: monospace; font-weight: bold;">
       
       Administrar donaciones
     
