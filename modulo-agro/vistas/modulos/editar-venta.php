@@ -68,7 +68,7 @@
                 
                   <div class="input-group">
                     
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+                    <span class="input-group-addon" style="background-color:#03A5C2; color:white; border: 3px #03A5C2 solid;"><i class="fa fa-user"></i></span> 
 
                     <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $vendedor["nombre"]; ?>"  style="background:black; color:white" readonly>
 
@@ -86,7 +86,7 @@
                   
                   <div class="input-group">
                     
-                    <span class="input-group-addon" style="background:black; color:white"><i class="fa fa-key"></i></span>
+                    <span class="input-group-addon" style="background:#03A5C2; color:white; border: 3px #03A5C2 solid;"><i class="fa fa-key"></i></span>
 
                    <input type="text" class="form-control" id="nuevaVenta" name="editarVenta" value="<?php echo $venta["codigo"]; ?>" style="background:black; color:white" readonly>
                
@@ -102,9 +102,9 @@
                   
                   <div class="input-group">
                     
-                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                    <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="fa fa-users"></i></span>
                     
-                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
+                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" style="background:#0695AF; color:white; font-weight:bold;border: 2px #03A5C2 solid;" required>
 
                     <option value="<?php echo $cliente["id"]; ?>"><?php echo $cliente["nombre"]; ?></option>
 
@@ -117,7 +117,7 @@
 
                        foreach ($categorias as $key => $value) {
 
-                         echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                         echo '<option style="background:black; color:white" value="'.$value["id"].'">'.$value["nombre"].'</option>';
 
                        }
 
@@ -125,7 +125,7 @@
 
                     </select>
                     
-                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar Beneficiario</button></span>
+                    <span class="input-group-addon" style="background:#FFC301; color:white; border: 2px #FFC301 solid;"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal" style="background:#FFC301; color:black; border: 2px #FFC301 solid;">Agregar Beneficiario</button></span>
                   
                   </div>
                 
@@ -197,7 +197,7 @@
                 BOTÓN PARA AGREGAR PRODUCTO
                 ======================================-->
 
-                <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
+                <button type="button" class="btn btn-default hidden-lg btnAgregarProducto" style="background-color:#D30606; color:white; border: 1px #D30606 solid;">Agregar producto</button>
 
                 <hr>
 
@@ -234,7 +234,7 @@
 
                                <input type="hidden" name="nuevoPrecioNeto" id="nuevoPrecioNeto" value="<?php echo $venta["neto"]; ?>" required>
 
-                              <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                              <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="fa fa-percent"></i></span>
                         
                             </div>
 
@@ -244,7 +244,7 @@
                             
                             <div class="input-group">
                            
-                              <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
+                              <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="ion ion-social-usd"></i></span>
 
                               <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="<?php echo $venta["neto"]; ?>"  value="<?php echo $venta["total"]; ?>" style="background:black; color:white" readonly required>
 
@@ -277,11 +277,11 @@
                     
                      <div class="input-group">
                   
-                      <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" required>
-                        <option value="">Select. método de donación a la fundación</option>
-                        <option value="Efectivo">Efectivo</option>
-                        <option value="TC">Tarjeta Crédito</option>
-                        <option value="TD">Tarjeta Débito</option>                  
+                      <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago"  style="background:#02788E; color:white; font-weight:bold;border: 2px #03A5C2 solid;" required>
+                        <option value="" style="background:black; color:white">Select. método de donación a la fundación</option>
+                        <option value="Efectivo" style="background:black; color:white">Efectivo</option>
+                        <option value="TC" style="background:black; color:white">Tarjeta Crédito</option>
+                        <option value="TD" style="background:black; color:white">Tarjeta Débito</option>                  
                       </select>    
 
                     </div>

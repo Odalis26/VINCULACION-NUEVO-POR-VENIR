@@ -62,9 +62,9 @@ if($_SESSION["perfil"] == "Especial"){
                 
                   <div class="input-group">
                     
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+                    <span class="input-group-addon" style="background-color:#03A5C2; color:white; border: 3px #03A5C2 solid;"><i class="fa fa-user"></i></span> 
 
-                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $_SESSION["nombre"]; ?>"  style="background:black; color:white" readonly>
+                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $_SESSION["nombre"]; ?>"  style="background:black; color:white;" readonly>
 
                     <input type="hidden" name="idVendedor" value="<?php echo $_SESSION["id"]; ?>" style="background:black; color:white">
 
@@ -80,7 +80,7 @@ if($_SESSION["perfil"] == "Especial"){
                   
                   <div class="input-group">
                     
-                    <span class="input-group-addon" style="background:black; color:white"><i class="fa fa-key"></i></span>
+                    <span class="input-group-addon" style="background:#03A5C2; color:white; border: 3px #03A5C2 solid;"><i class="fa fa-key"></i></span>
 
                     <?php
 
@@ -126,11 +126,11 @@ if($_SESSION["perfil"] == "Especial"){
                   
                   <div class="input-group">
                     
-                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                    <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="fa fa-users"></i></span>
                     
-                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
+                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" style="background:#0695AF; color:white; font-weight:bold;border: 2px #03A5C2 solid;"required>
 
-                    <option value="">Seleccionar </option>
+                    <option value="" style="background:black; color:white">Seleccionar </option>
 
                     <?php
 
@@ -141,7 +141,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                        foreach ($categorias as $key => $value) {
 
-                         echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                         echo '<option style="background:black; color:white" value="'.$value["id"].'">'.$value["nombre"].'</option>';
 
                        }
 
@@ -149,7 +149,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     </select>
                     
-                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar Beneficiario</button></span>
+                    <span class="input-group-addon" style="background:#FFC301; color:white; border: 2px #FFC301 solid;"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal" style="background:#FFC301; color:black; border: 2px #FFC301 solid;">Agregar Beneficiario</button></span>
                   
                   </div>
                 
@@ -208,7 +208,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                                <input type="hidden" name="nuevoPrecioNeto" id="nuevoPrecioNeto" required>
 
-                              <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                              <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="fa fa-percent"></i></span>
                         
                             </div>
 
@@ -218,7 +218,7 @@ if($_SESSION["perfil"] == "Especial"){
                             
                             <div class="input-group">
                            
-                              <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
+                              <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="ion ion-social-usd"></i></span>
 
                               <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" style="background:black; color:white" readonly required>
 
@@ -251,11 +251,11 @@ if($_SESSION["perfil"] == "Especial"){
                     
                      <div class="input-group">
                   
-                      <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" required>
-                        <option value="" >Select. método de donación a la fundación</option>
-                        <option value="Efectivo">Efectivo</option>                
-                        <option value="TC">Tarjeta Crédito</option>
-                        <option value="TD">Tarjeta Débito</option> 
+                      <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" style="background:#02788E; color:white; font-weight:bold;border: 2px #03A5C2 solid;" required>
+                        <option value="" style="background:black; color:white">Select. método de donación a la fundación</option>
+                        <option value="Efectivo" style="background:black; color:white">Efectivo</option>                
+                        <option value="TC" style="background:black; color:white">Tarjeta Crédito</option>
+                        <option value="TD" style="background:black; color:white">Tarjeta Débito</option> 
                       </select>    
 
                     </div>

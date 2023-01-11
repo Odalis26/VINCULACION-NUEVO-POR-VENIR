@@ -1,6 +1,6 @@
-<div class="content-wrapper" style="background-color:#fffaf0; color:#800080;">
+<div class="content-wrapper" style="background-color:white; color:#800080;">
 
-  <section class="content-header" style="background-color:#fffaf0; color:#800080;">
+  <section class="content-header" style="background-color:white; color:#800080;">
     
     <h1>
       
@@ -20,7 +20,7 @@
 
   </section>
 
-  <section class="content" style="background-color:#fffaf0; color:#800080;">
+  <section class="content" style="background-color:white; color:#800080;">
 
     <div class="row">
       

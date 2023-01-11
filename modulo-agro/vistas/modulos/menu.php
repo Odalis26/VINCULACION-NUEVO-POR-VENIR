@@ -10,7 +10,7 @@
 
 			echo '<li class="active">
 
-				<a href="inicio"  style="background-color:black;">
+				<a href="inicio"  style="background-color:black;font-weight: bold;">
 
 					<i class="fa fa-home"></i>
 					<span>Inicio</span>
@@ -21,7 +21,7 @@
 
 			<li>
 
-				<a href="usuarios"  style="background-color:#04246E;">
+				<a href="usuarios"  style="background-color:#04246E;font-weight: bold;">
 
 					<i class="fa fa-user"></i>
 					<span>Usuarios</span>
@@ -36,7 +36,7 @@
 
 			echo '<li>
 
-				<a href="categorias"  style="background-color:#04FA00;color:black;">
+				<a href="categorias"  style="background-color:#04FA00;color:black;font-weight: bold;">
 
 					<i class="fa fa-th"></i>
 					<span>Categorías</span>
@@ -47,7 +47,7 @@
 
 			<li>
 
-				<a href="productos"  style="background-color:#ff1493;">
+				<a href="productos"  style="background-color:#ff1493;font-weight: bold;">
 
 					<i class="fa fa-product-hunt"></i>
 					<span>Productos</span>
@@ -62,7 +62,7 @@
 
 			echo '<li>
 
-				<a href="clientes"  style="background-color:#FFC301;color:black">
+				<a href="clientes"  style="background-color:#FFC301;color:black;font-weight: bold;">
 
 					<i class="fa fa-users"></i>
 					<span>Beneficiarios</span>
@@ -77,7 +77,7 @@
 
 			echo '<li class="treeview">
 
-				<a href="#"  style="background-color:#03A5C2;">
+				<a href="ventas"  style="background-color:#03A5C2;font-weight: bold;">
 
 					<i class="fa fa-list-ul"  style="background-color:#03A5C2;"></i>
 					
@@ -95,10 +95,10 @@
 					
 					<li>
 
-						<a href="ventas"  style="background-color:#03A5C2;">
+						<a href="ventas"  style="background-color:#03A5C2;font-weight: bold;">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Administrar donaciones</span>
+							<span>Administrar</span>
 
 						</a>
 
@@ -106,7 +106,7 @@
 
 					<li>
 
-						<a href="crear-venta"  style="background-color:#03A5C2;">
+						<a href="crear-venta"  style="background-color:#03A5C2;font-weight: bold;">
 							
 							<i class="fa fa-circle-o"></i>
 							<span>Crear donación</span>
@@ -119,10 +119,10 @@
 
 					echo '<li>
 
-						<a href="reportes"  style="background-color:#03A5C2;">
+						<a href="reportes"  style="background-color:#03A5C2;font-weight: bold;">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Reporte de donaciones</span>
+							<span>Reporte </span>
 
 						</a>
 

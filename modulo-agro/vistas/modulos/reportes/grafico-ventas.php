@@ -50,7 +50,7 @@ GRÁFICO DE DONACIONES
 ======================================-->
 
 
-<div class="box box-solid bg-teal-gradient" style="background-color:#fffaf0; color:#800080;">
+<div class="box box-solid bg-teal-gradient" style="background-color:white; color:#800080;">
 	
 	<div class="box-header" style="background-color:black; color:#00e7ff;">
 		
@@ -60,7 +60,7 @@ GRÁFICO DE DONACIONES
 
 	</div>
 
-	<div class="box-body border-radius-none nuevoGraficoVentas" style="background-color:#fffaf0; color:#800080;">
+	<div class="box-body border-radius-none nuevoGraficoVentas" style="background-color:white; color:#800080;">
 
 		<div class="chart" id="line-chart-ventas" style="height: 250px; color:#00FF00;"></div>
 
