@@ -14,9 +14,9 @@ if($_SESSION["perfil"] == "Especial"){
 
 ?>
 
-<div class="content-wrapper" style="background-color:#FFFFFF">
+<div class="content-wrapper" style="background-color:white">
 
-  <section class="content-header" style="background-color:#FFFFFF">
+  <section class="content-header" style="background-color:white">
     
     <h1 style="color:#03A5C2; font-family: monospace; font-weight: bold;">
       
@@ -24,7 +24,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     </h1>
 
-    <ol class="breadcrumb" style="background-color:#FFFFFF">
+    <ol class="breadcrumb" style="background-color:white">
       
       <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -34,7 +34,7 @@ if($_SESSION["perfil"] == "Especial"){
 
   </section>
 
-  <section class="content" style="background-color:#FFFFFF">
+  <section class="content" style="background-color:white">
 
     <div class="row">
 
@@ -44,15 +44,15 @@ if($_SESSION["perfil"] == "Especial"){
       
       <div class="col-lg-5 col-xs-12">
         
-        <div class="box box-success" style="background-color:#FFFFFF; border: 2px white solid;">
+        <div class="box box-success" style="background-color:white; border: 2px white solid;">
           
-          <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;"></div>
+          <div class="box-header with-border" style="background-color:white; border: 2px white solid;"></div>
 
-          <form role="form" method="post" class="formularioVenta" style="background-color:#FFFFFF; border: 2px white solid;">
+          <form role="form" method="post" class="formularioVenta" style="background-color:white; border: 2px white solid;">
 
-            <div class="box-body" style="background-color:#FFFFFF; border: 2px white solid;">
+            <div class="box-body" style="background-color:white; border: 2px white solid;">
   
-              <div class="box" style="background:white; color:white">
+              <div class="box" style="background:white; color:white; border: 2px white solid;">
 
                 <!--=====================================
                 ENTRADA DEL ADMINISTRADOR DE DONACIONES
@@ -64,9 +64,9 @@ if($_SESSION["perfil"] == "Especial"){
                     
                     <span class="input-group-addon" style="background-color:#03A5C2; color:white; border: 3px #03A5C2 solid;"><i class="fa fa-user"></i></span> 
 
-                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $_SESSION["nombre"]; ?>"  style="background:black; color:white;" readonly>
+                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $_SESSION["nombre"]; ?>"  style="background:black; color:white;border: 2px #03A5C2 solid;" readonly>
 
-                    <input type="hidden" name="idVendedor" value="<?php echo $_SESSION["id"]; ?>" style="background:black; color:white">
+                    <input type="hidden" name="idVendedor" value="<?php echo $_SESSION["id"]; ?>" style="background:black; color:white;border: 2px #03A5C2 solid;">
 
                   </div>
 
@@ -91,7 +91,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     if(!$ventas){
 
-                      echo '<input type="text" class="form-control" id="nuevaVenta" name="nuevaVenta" value="10001" readonly style="background:black; color:white">';
+                      echo '<input type="text" class="form-control" id="nuevaVenta" name="nuevaVenta" value="10001" readonly style="background:black; color:white;">';
                   
 
                     }else{
@@ -106,7 +106,7 @@ if($_SESSION["perfil"] == "Especial"){
 
 
 
-                      echo '<input type="text" class="form-control" id="nuevaVenta" name="nuevaVenta" value="'.$codigo.'" readonly style="background:black; color:white">';
+                      echo '<input type="text" class="form-control" id="nuevaVenta" name="nuevaVenta" value="'.$codigo.'" readonly style="background:black; color:white; border: 2px #03A5C2 solid;">';
                   
 
                     }
@@ -159,7 +159,7 @@ if($_SESSION["perfil"] == "Especial"){
                 ENTRADA PARA AGREGAR PRODUCTO
                 ======================================--> 
 
-                <div class="form-group row nuevoProducto">
+                <div class="form-group row nuevoProducto" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;">
 
                 
 
@@ -202,7 +202,7 @@ if($_SESSION["perfil"] == "Especial"){
                             
                             <div class="input-group">
                            
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" required>
+                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" style="border: 2px #03A5C2 solid;" required>
 
                                <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
 
@@ -220,7 +220,7 @@ if($_SESSION["perfil"] == "Especial"){
                            
                               <span class="input-group-addon" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;"><i class="ion ion-social-usd"></i></span>
 
-                              <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" style="background:black; color:white" readonly required>
+                              <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" style="background:black; color:white; border: 2px #03A5C2 solid;" readonly required>
 
                               <input type="hidden" name="totalVenta" id="totalVenta" style="background:black; color:white">
                               
@@ -274,7 +274,7 @@ if($_SESSION["perfil"] == "Especial"){
 
           </div>
 
-          <div class="box-footer" style="background-color:#FFFFFF; border: 2px white solid;">
+          <div class="box-footer" style="background-color:white; border: 2px white solid;">
 
             <button type="submit" class="btn btn-primary pull-right">Guardar </button>
 
@@ -297,15 +297,15 @@ if($_SESSION["perfil"] == "Especial"){
       LA TABLA DE PRODUCTOS
       ======================================-->
 
-      <div class="col-lg-7 hidden-md hidden-sm hidden-xs" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="col-lg-7 hidden-md hidden-sm hidden-xs" style="background-color:white; border: 2px white solid;">
         
-        <div class="box box-warning" style="background-color:#FFFFFF; border: 2px white solid;">
+        <div class="box box-warning" style="background-color:white; border: 2px white solid;">
 
-          <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;"></div>
+          <div class="box-header with-border" style="background-color:white; border: 2px white solid;"></div>
 
-          <div class="box-body" style="background-color:#FFFFFF; border: 2px white solid; color:black">
+          <div class="box-body" style="background-color:white; border: 2px white solid; color:black">
             
-            <table class="table table-bordered table-striped dt-responsive tablaVentas" style="background-color:#FFFFFF; border: 2px white solid;">
+            <table class="table table-bordered table-striped dt-responsive tablaVentas" style="background-color:white; border: 2px white solid;">
               
                <thead>
 
@@ -375,7 +375,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -389,7 +389,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-key"></i></span> 
 
-                <input type="number" min="0" class="form-control input-lg" name="nuevoDocumentoId" placeholder="Ingresar documento" required>
+                <input type="number" min="0" class="form-control input-lg" name="nuevoDocumentoId" placeholder="Ingresar documento" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -403,7 +403,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-envelope"></i></span> 
 
-                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" required>
+                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -417,7 +417,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99) 9999-9999'" data-mask style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -431,7 +431,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-map-marker"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
+                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -445,7 +445,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border:3px solid #FFC301"><i class="fa fa-calendar"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask style="border: 2px #FFC301 solid;" required>
 
               </div>
 

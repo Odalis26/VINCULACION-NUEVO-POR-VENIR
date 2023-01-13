@@ -13,9 +13,9 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
-<div class="content-wrapper" style="background-color:#FFFFFF">
+<div class="content-wrapper" style="background-color:white">
 
-  <section class="content-header" style="background-color:#FFFFFF">
+  <section class="content-header" style="background-color:white">
     
     <h1 style="color:#04246E; font-family: monospace; font-weight: bold;">
       
@@ -23,7 +23,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
     
     </h1>
 
-    <ol class="breadcrumb" style="background-color:#FFFFFF">
+    <ol class="breadcrumb" style="background-color:white">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -33,11 +33,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
   </section>
 
-  <section class="content" style="background-color:#FFFFFF">
+  <section class="content" style="background-color:white">
 
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:white; border: 2px white solid;">
 
-      <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario" style="background-color:#04246E; color:white; border: 2px #04246E solid;">
           
@@ -86,11 +86,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
                   if($value["foto"] != ""){
 
-                    echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="120px"></td>';
+                    echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="120px" style="border: 4px #04246E solid;"></td>';
 
                   }else{
 
-                    echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="120px"></td>';
+                    echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="120px" style="border: 4px #04246E solid;"></td>';
 
                   }
 
@@ -177,7 +177,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" style="border: 2px #04246E solid;" required>
 
               </div>
 
@@ -191,7 +191,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" style="border: 2px #04246E solid;" required>
 
               </div>
 
@@ -205,7 +205,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
+                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" style="border: 2px #04246E solid;" required>
 
               </div>
 
@@ -221,7 +221,7 @@ MODAL AGREGAR USUARIO
 
                 <select class="form-control input-lg" name="nuevoPerfil" style="background:#000; color:white">
                   
-                  <option value="">Selecionar perfil</option>
+                  <option value="" style="background:#04246E;border: 2px #04246E solid;">Selecionar perfil</option>
 
                   <option value="Administrador">Administrador</option>
 
@@ -320,7 +320,7 @@ MODAL EDITAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="background:#000; color:white" required>
+                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="border: 2px #04246E solid;" required>
 
               </div>
 
@@ -348,7 +348,7 @@ MODAL EDITAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="background:#000; color:white">
+                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="border: 2px #04246E solid;">
 
                 <input type="hidden" id="passwordActual" name="passwordActual" style="background:#000; color:white;">
 
@@ -364,9 +364,9 @@ MODAL EDITAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
 
-                <select class="form-control input-lg" name="editarPerfil" >
+                <select class="form-control input-lg" name="editarPerfil" style="background:#000; color:white">
                   
-                  <option value="" id="editarPerfil" style="background:#000; color:#00e7ff;"></option>
+                  <option value="" id="editarPerfil" style="background:#04246E;border: 2px #04246E solid;"></option>
 
                   <option value="Administrador">Administrador</option>
 
@@ -386,11 +386,11 @@ MODAL EDITAR USUARIO
               
               <div class="panel" style="background:white; color:#04246E; border: 2px white solid;">SUBIR FOTO</div>
 
-              <input type="file" class="nuevaFoto" name="editarFoto" style="background:#04246E; color:white; border: 2px white solid;">
+              <input type="file" class="nuevaFoto" name="editarFoto" style="background:#04246E; color:white; border: 2px #04246E solid;">
 
               <p class="help-block">Peso máximo de la foto 2MB</p>
 
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="130px">
+              <img src="vistas/img/usuarios/default/anonymous.png" style="background:#04246E; color:#04246E; border: 2px #04246E solid;" class="img-thumbnail previsualizarEditar" width="130px">
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 

@@ -14,9 +14,9 @@ if($_SESSION["perfil"] == "Vendedor"){
 
 ?>
 
-<div class="content-wrapper"  style="background-color:#FFFFFF">
+<div class="content-wrapper"  style="background-color:white">
 
-  <section class="content-header"  style="background-color:#FFFFFF">
+  <section class="content-header"  style="background-color:white">
     
     <h1 style="color:#228b22; font-family: monospace; font-weight: bold;">
       
@@ -24,7 +24,7 @@ if($_SESSION["perfil"] == "Vendedor"){
     
     </h1>
 
-    <ol class="breadcrumb"  style="background-color:#FFFFFF">
+    <ol class="breadcrumb"  style="background-color:white">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -34,11 +34,11 @@ if($_SESSION["perfil"] == "Vendedor"){
 
   </section>
 
-  <section class="content"  style="background-color:#FFFFFF">
+  <section class="content"  style="background-color:white">
 
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:white; border: 2px white solid;">
 
-      <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCategoria" style="background-color:#04FA00; color:black; border: 2px #04FA00 solid;">
           
@@ -154,7 +154,7 @@ MODAL AGREGAR CATEGORÍA
               
                 <span class="input-group-addon" style="background:#4CEB02; color:black; border: 2px #4CEB02 solid;"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoría" required>
+                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoría" style="border: 2px #4CEB02 solid;"required>
 
               </div>
 
@@ -231,7 +231,7 @@ MODAL EDITAR CATEGORÍA
               
                 <span class="input-group-addon" style="background:#4CEB02; color:black; border: 2px #4CEB02 solid;"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarCategoria" id="editarCategoria" required>
+                <input type="text" class="form-control input-lg" name="editarCategoria" id="editarCategoria"  style="border: 2px #4CEB02 solid;"required>
 
                  <input type="hidden"  name="idCategoria" id="idCategoria" required>
 

@@ -14,9 +14,9 @@ if($_SESSION["perfil"] == "Especial"){
 
 ?>
 
-<div class="content-wrapper" style="background-color:#FFFFFF">
+<div class="content-wrapper" style="background-color:white">
 
-  <section class="content-header" style="background-color:#FFFFFF">
+  <section class="content-header" style="background-color:white">
     
     <h1 style="color:#ff8c00; font-family: monospace; font-weight: bold;">
       
@@ -24,7 +24,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     </h1>
 
-    <ol class="breadcrumb" style="background-color:#FFFFFF">
+    <ol class="breadcrumb" style="background-color:white">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -34,11 +34,11 @@ if($_SESSION["perfil"] == "Especial"){
 
   </section>
 
-  <section class="content" style="background-color:#FFFFFF">
+  <section class="content" style="background-color:white">
 
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:white; border: 2px white solid;">
 
-      <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente" style="background-color:#FFC301; color:black; border: 2px #FFC301 solid;">
           
@@ -180,7 +180,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -194,7 +194,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="number" min="0" class="form-control input-lg" name="nuevoDocumentoId" placeholder="Ingresar documento" required>
+                <input type="number" min="0" class="form-control input-lg" name="nuevoDocumentoId" placeholder="Ingresar documento" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -208,7 +208,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-envelope"></i></span> 
 
-                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" required>
+                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -222,7 +222,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99) 9999-9999'" data-mask style="border: 2px #FFC301 solid;"required>
 
               </div>
 
@@ -236,7 +236,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-map-marker"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
+                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -250,7 +250,7 @@ MODAL AGREGAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-calendar"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -327,7 +327,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarCliente" id="editarCliente" required>
+                <input type="text" class="form-control input-lg" name="editarCliente" id="editarCliente" style="border: 2px #FFC301 solid;" required>
                 <input type="hidden" id="idCliente" name="idCliente">
               </div>
 
@@ -341,7 +341,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="number" min="0" class="form-control input-lg" name="editarDocumentoId" id="editarDocumentoId" required>
+                <input type="number" min="0" class="form-control input-lg" name="editarDocumentoId" id="editarDocumentoId" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -355,7 +355,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-envelope"></i></span> 
 
-                <input type="email" class="form-control input-lg" name="editarEmail" id="editarEmail" required>
+                <input type="email" class="form-control input-lg" name="editarEmail" id="editarEmail" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -369,7 +369,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" data-inputmask="'mask':'(99) 9999-9999'" data-mask style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -383,7 +383,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-map-marker"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion"  required>
+                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion" style="border: 2px #FFC301 solid;" required>
 
               </div>
 
@@ -397,7 +397,7 @@ MODAL EDITAR BENEFICIARIO
               
                 <span class="input-group-addon" style="background:#FFC301; color:black; border: 2px #FFC301 solid;"><i class="fa fa-calendar"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarFechaNacimiento" id="editarFechaNacimiento"  data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
+                <input type="text" class="form-control input-lg" name="editarFechaNacimiento" id="editarFechaNacimiento"  data-inputmask="'alias': 'yyyy/mm/dd'" data-mask style="border: 2px #FFC301 solid;" required>
 
               </div>
 
