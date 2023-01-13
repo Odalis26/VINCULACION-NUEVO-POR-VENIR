@@ -124,9 +124,9 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" style="background:#000; color:white; border: 2px #D5005B solid;" required>
+                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" style="background:white; color:black; border: 2px #D5005B solid;" required>
                   
-                  <option value="" style="background:#D5005B;border: 2px #D5005B solid;">Selecionar categoría</option>
+                  <option value="" style="background:#D5005B;border: 2px #D5005B solid;color:white">Selecionar categoría</option>
 
                   <?php
 
@@ -156,7 +156,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" style="border: 2px #D5005B solid;" required>
+                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" style="background:white; color:black; border: 2px #D5005B solid;" required>
 
               </div>
 
@@ -170,7 +170,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" style="border: 2px #D5005B solid;" required>
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" style="background:white; color:black; border: 2px #D5005B solid;" required>
 
               </div>
 
@@ -184,7 +184,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-check"></i></span> 
 
-                <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" style="border: 2px #D5005B solid;" required>
+                <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" style="background:white; color:black; border: 2px #D5005B solid;" required>
 
               </div>
 
@@ -200,7 +200,7 @@ MODAL AGREGAR PRODUCTO
                   
                     <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-arrow-up"></i></span> 
 
-                    <input type="number" class="form-control input-lg" id="nuevoPrecioCompra" name="nuevoPrecioCompra" step="any" min="0" placeholder="Puntuación entrada" style="border: 2px #D5005B solid;" required>
+                    <input type="number" class="form-control input-lg" id="nuevoPrecioCompra" name="nuevoPrecioCompra" step="any" min="0" placeholder="Puntuación entrada" style="background:white; color:black;border: 2px #D5005B solid;" required>
 
                   </div>
 
@@ -214,7 +214,7 @@ MODAL AGREGAR PRODUCTO
                   
                     <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-arrow-down"></i></span> 
 
-                    <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Puntuación de salida" style="border: 2px #D5005B solid;color:white;" required>
+                    <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Puntuación de salida" style="background:white; color:black;border: 2px #D5005B solid;" required>
 
                   </div>
                 
@@ -242,7 +242,7 @@ MODAL AGREGAR PRODUCTO
                     
                     <div class="input-group">
                       
-                      <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" style="border: 2px #D5005B solid;" required>
+                      <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" style="border: 2px #D5005B solid; background:white; color:black;" required>
 
                       <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-percent"></i></span>
 
@@ -338,9 +338,9 @@ MODAL EDITAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-th"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg"  style="background:black; color:white; border: 2px #D5005B solid;" name="editarCategoria" readonly required>
+                <select class="form-control input-lg"  style="background:#D5005B; color:white; border: 2px #D5005B solid;" name="editarCategoria" readonly required>
                   
                   <option id="editarCategoria" style="background:#D5005B;border: 2px #D5005B solid;"></option>
 
@@ -356,9 +356,9 @@ MODAL EDITAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-code"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" style="background:black; color:white; border: 2px #D5005B solid;" readonly required>
+                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" style="background:white; color:#D5005B; border: 2px #D5005B solid;" readonly required>
 
               </div>
 
@@ -370,9 +370,9 @@ MODAL EDITAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarDescripcion" name="editarDescripcion" style="border: 2px #D5005B solid;"required>
+                <input type="text" class="form-control input-lg" id="editarDescripcion" name="editarDescripcion" style="background:#D5005B; color:white; border: 2px #D5005B solid;"required>
 
               </div>
 
@@ -384,9 +384,9 @@ MODAL EDITAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-check"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-check"></i></span> 
 
-                <input type="number" class="form-control input-lg" id="editarStock" name="editarStock" min="0" style="border: 2px #D5005B solid;" required>
+                <input type="number" class="form-control input-lg" id="editarStock" name="editarStock" min="0" style="background:#D5005B; color:white; border: 2px #D5005B solid;" required>
 
               </div>
 
@@ -400,9 +400,9 @@ MODAL EDITAR PRODUCTO
                 
                   <div class="input-group">
                   
-                    <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-arrow-up"></i></span> 
+                    <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-arrow-up"></i></span> 
 
-                    <input type="number" class="form-control input-lg" id="editarPrecioCompra" name="editarPrecioCompra" step="any" min="0" style="border: 2px #D5005B solid;" required>
+                    <input type="number" class="form-control input-lg" id="editarPrecioCompra" name="editarPrecioCompra" step="any" min="0" style="background:#D5005B; color:white; border: 2px #D5005B solid;" required>
 
                   </div>
 
@@ -414,9 +414,9 @@ MODAL EDITAR PRODUCTO
                 
                   <div class="input-group">
                   
-                    <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-arrow-down"></i></span> 
+                    <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-arrow-down"></i></span> 
 
-                    <input type="number" class="form-control input-lg" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" style="background:black; color:white; border: 2px #D5005B solid;" readonly required>
+                    <input type="number" class="form-control input-lg" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" style="background:#D5005B; color:white; border: 2px #D5005B solid;" readonly required>
 
                   </div>
                 
@@ -444,9 +444,9 @@ MODAL EDITAR PRODUCTO
                     
                     <div class="input-group">
                       
-                      <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" style="border: 2px #D5005B solid;" required>
+                      <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" style="border: 2px #D5005B solid; background:#D5005B; color:white;" required>
 
-                      <span class="input-group-addon" style="background:#D5005B; color:white; border: 2px #D5005B solid;"><i class="fa fa-percent"></i></span>
+                      <span class="input-group-addon" style="background:white; color:#D5005B; border: 2px #D5005B solid;"><i class="fa fa-percent"></i></span>
 
                     </div>
 

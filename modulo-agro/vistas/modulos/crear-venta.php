@@ -159,7 +159,7 @@ if($_SESSION["perfil"] == "Especial"){
                 ENTRADA PARA AGREGAR PRODUCTO
                 ======================================--> 
 
-                <div class="form-group row nuevoProducto" style="background:#03A5C2; color:white; border: 2px #03A5C2 solid;">
+                <div class="form-group row nuevoProducto" style="background:#e0ffff; color:white; border-right: 4px #03A5C2 dashed;">
 
                 
 

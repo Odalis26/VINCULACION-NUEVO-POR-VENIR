@@ -135,7 +135,7 @@
                 ENTRADA PARA AGREGAR PRODUCTO
                 ======================================--> 
 
-                <div class="form-group row nuevoProducto">
+                <div class="form-group row nuevoProducto" style="background:#e0ffff; color:white; border-right: 4px #03A5C2 dashed;">
 
                 <?php
 

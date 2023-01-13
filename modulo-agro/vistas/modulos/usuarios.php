@@ -177,7 +177,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" style="border: 2px #04246E solid;" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" style="border: 2px #04246E solid;background:white;color:#04246E;" required>
 
               </div>
 
@@ -191,7 +191,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" style="border: 2px #04246E solid;" required>
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" style="border: 2px #04246E solid;background:white;color:#04246E;" required>
 
               </div>
 
@@ -205,7 +205,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" style="border: 2px #04246E solid;" required>
+                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" style="border: 2px #04246E solid; background:white;color:#04246E;" required>
 
               </div>
 
@@ -219,9 +219,9 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
 
-                <select class="form-control input-lg" name="nuevoPerfil" style="background:#000; color:white">
+                <select class="form-control input-lg" name="nuevoPerfil" style="background:white; color:#04246E; border: 2px #04246E solid; ">
                   
-                  <option value="" style="background:#04246E;border: 2px #04246E solid;">Selecionar perfil</option>
+                  <option value="" style="background:#04246E;border: 2px #04246E solid; color:white;">Selecionar perfil</option>
 
                   <option value="Administrador">Administrador</option>
 
@@ -318,9 +318,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="border: 2px #04246E solid;" required>
+                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="border: 2px #04246E solid;background:#04246E;color:white;" required>
 
               </div>
 
@@ -332,9 +332,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario"  value="" style="background:#000; color:white" readonly>
+                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario"  value="" style="border: 2px #04246E solid;background:white;color:#04246E;" readonly>
 
               </div>
 
@@ -346,9 +346,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="border: 2px #04246E solid;">
+                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="border: 2px #04246E solid;background:#04246E;color:white;">
 
                 <input type="hidden" id="passwordActual" name="passwordActual" style="background:#000; color:white;">
 
@@ -362,11 +362,11 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
+                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
 
-                <select class="form-control input-lg" name="editarPerfil" style="background:#000; color:white">
+                <select class="form-control input-lg" name="editarPerfil" style="border: 2px #04246E solid;background:#04246E;color:white;">
                   
-                  <option value="" id="editarPerfil" style="background:#04246E;border: 2px #04246E solid;"></option>
+                  <option value="" id="editarPerfil" style="background:white;border: 2px #04246E solid;color:#04246E"></option>
 
                   <option value="Administrador">Administrador</option>
 
