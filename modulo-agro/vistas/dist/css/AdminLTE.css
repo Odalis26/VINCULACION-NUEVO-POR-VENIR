@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: #000;
 }
 /* Layout */
@@ -1336,8 +1336,8 @@ a:focus {
   border-radius: 0;
   box-shadow: none;
   border-color: #000000;
-  background-color: #000;
-  color:white;
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
 }
 .form-control:focus {
   border-color: #000000;

@@ -56,7 +56,7 @@ GRÁFICO DE DONACIONES
 		
  		<i class="fa fa-th" style="color:#00e7ff;"></i>
 
-  		<h3 class="box-title">Gráfico de donaciones</h3>
+  		<h3 class="box-title" style="font-weight: 700;">Gráfico de donaciones</h3>
 
 	</div>
 

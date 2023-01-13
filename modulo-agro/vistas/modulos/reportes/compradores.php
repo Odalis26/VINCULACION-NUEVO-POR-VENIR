@@ -42,15 +42,15 @@ $noRepetirNombres = array_unique($arrayClientes);
 VENDEDORES
 ======================================-->
 
-<div class="box box-primary">
+<div class="box box-primary" style="background-color: white;border: 4px solid #dc143c;">
 	
-	<div class="box-header with-border">
+	<div class="box-header with-border" style="background-color: white;border: 2px solid white; color: #dc143c">
     
-    	<h3 class="box-title">Beneficiarios</h3>
+    	<h3 class="box-title" style="font-weight:700">Beneficiarios</h3>
   
   	</div>
 
-  	<div class="box-body">
+  	<div class="box-body" style="background-color: white;border: 2px solid white;">
   		
 		<div class="chart-responsive">
 			
@@ -79,7 +79,7 @@ var bar = new Morris.Bar({
 
   ?>
   ],
-  barColors: ['#f6a'],
+  barColors: ['#dc143c'],
   xkey: 'y',
   ykeys: ['a'],
   labels: ['donaciones'],
