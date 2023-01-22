@@ -137,6 +137,21 @@
 			</li>';
 
 		}
+		if ($_SESSION["perfil"] == "Administrador") {
+
+			echo '<li class="active">
+	<li>
+
+		<a href="informacion"  style="background-color:orange; color:black;">
+
+		<i class="fa fa-globe"></i>
+			<span><strong>Página estática</strong></span>
+
+		</a>
+
+	</li>';
+
+		}
 
 		?>
 
