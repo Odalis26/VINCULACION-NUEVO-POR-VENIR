@@ -56,20 +56,7 @@ class ControladorInformacion
 					}
 
 				} else {
-					function generateCode()
-					{
-						$reg = "0123456789";
-						$stringSize = strlen($reg);
-						$code = "";
-						$codeSize = 6;
-						for ($i = 1; $i <= $codeSize; $i++) {
-							$pos = rand(0, $stringSize - 1);
-							$code .= substr($reg, $pos, 1);
-						}
-						return $code;
-					}
-
-					$newCode = generateCode();
+					$newCode = mt_rand(0001,9999);
 					$logo = $_FILES["nuevoLogo"]["name"];
 					$path = $_FILES["nuevoLogo"]["tmp_name"];
 					$directorio = "vistas/img/logo/" . $newCode . "/";
