@@ -142,7 +142,7 @@
 			echo '<li class="active">
 	<li>
 
-		<a href="informacion"  style="background-color:orange; color:black;">
+		<a href="informacion"  style="background-color:#615e9b; color:azure;">
 
 		<i class="fa fa-globe"></i>
 			<span><strong>Página estática</strong></span>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-12-2022 a las 03:27:51
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 7.4.27
+-- Tiempo de generación: 19-01-2023 a las 17:10:54
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
-  `categoria` text COLLATE utf8_spanish_ci NOT NULL,
+  `categoria` text NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -43,7 +43,7 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 (3, 'Andamios', '2017-12-21 20:53:29'),
 (4, 'Generadores de energía', '2017-12-21 20:53:29'),
 (5, 'Equipos para construcción', '2017-12-21 20:53:29'),
-(6, 'Martillos mecánicos', '2017-12-21 23:06:40'),
+(6, 'Martillos mecánicoss', '2023-01-07 03:21:49'),
 (7, 'herramientas de agricultura', '2022-12-22 02:04:03');
 
 -- --------------------------------------------------------
@@ -54,11 +54,11 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` text NOT NULL,
   `documento` int(11) NOT NULL,
-  `email` text COLLATE utf8_spanish_ci NOT NULL,
-  `telefono` text COLLATE utf8_spanish_ci NOT NULL,
-  `direccion` text COLLATE utf8_spanish_ci NOT NULL,
+  `email` text NOT NULL,
+  `telefono` text NOT NULL,
+  `direccion` text NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `compras` int(11) NOT NULL,
   `ultima_compra` datetime NOT NULL,
@@ -85,15 +85,55 @@ INSERT INTO `clientes` (`id`, `nombre`, `documento`, `email`, `telefono`, `direc
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `donaciones`
+--
+
+CREATE TABLE `donaciones` (
+  `id` int(11) NOT NULL,
+  `cantidad` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `galeria`
+--
+
+CREATE TABLE `galeria` (
+  `id` int(11) NOT NULL,
+  `imagen` varchar(50) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `informacion`
+--
+
+CREATE TABLE `informacion` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `mision` longtext NOT NULL,
+  `vision` longtext NOT NULL,
+  `quienes_somos` longtext NOT NULL,
+  `numero` varchar(15) NOT NULL,
+  `correo` varchar(30) NOT NULL,
+  `logo` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
-  `codigo` text COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
-  `imagen` text COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` text NOT NULL,
   `stock` int(11) NOT NULL,
   `precio_compra` float NOT NULL,
   `precio_venta` float NOT NULL,
@@ -172,16 +212,54 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 -- --------------------------------------------------------
 
 --
+-- Volcado de datos para la tabla `informacion`
+--
+
+INSERT INTO `informacion` (`id`, `nombre`, `mision`, `vision`, `quienes_somos`, `numero`, `correo`, `logo`) VALUES
+(1, 'Fundación Nuevo Porvenir', 'm Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', 'v Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', 'qs Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', '+593976810545', 'contact@example.com', 'vistas/img/logo/logo.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `terrenos`
+--
+
+CREATE TABLE `terrenos` (
+  `id` int(11) NOT NULL,
+  `id_beneficiario` int(11) NOT NULL COMMENT 'foreing key de la tabla clientes',
+  `perimetro` int(200) NOT NULL,
+  `area` int(200) NOT NULL,
+  `adaptabilidad` varchar(200) NOT NULL,
+  `tipo_terreno` varchar(200) NOT NULL,
+  `tipo_suelo` varchar(200) NOT NULL,
+  `porcentaje_agua` int(200) NOT NULL,
+  `porcentaje_minerales` int(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `terrenos`
+--
+
+INSERT INTO `terrenos` (`id`, `id_beneficiario`, `perimetro`, `area`, `adaptabilidad`, `tipo_terreno`, `tipo_suelo`, `porcentaje_agua`, `porcentaje_minerales`) VALUES
+(1, 59, 1, 1, 'si', 'seco', 'seco', 12, 12),
+(2, 1, 12, 1, 'si', 'frio', 'seco', 1, 12),
+(3, 4, 13, 14, 'no', 'escaso', 'humedo', 12, 30),
+(4, 0, 12, 1, 'si', 'frio', 'so', 12, 30),
+(5, 13, 12, 12, 'si', 'frio', 'seco', 1, 30);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
-  `usuario` text COLLATE utf8_spanish_ci NOT NULL,
-  `password` text COLLATE utf8_spanish_ci NOT NULL,
-  `perfil` text COLLATE utf8_spanish_ci NOT NULL,
-  `foto` text COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` text NOT NULL,
+  `usuario` text NOT NULL,
+  `password` text NOT NULL,
+  `perfil` text NOT NULL,
+  `foto` text NOT NULL,
   `estado` int(11) NOT NULL,
   `ultimo_login` datetime NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -192,10 +270,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`, `estado`, `ultimo_login`, `fecha`) VALUES
-(1, 'Administrador', 'admin', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/admin/649.jpg', 1, '2022-12-22 13:13:21', '2022-12-22 18:13:21'),
-(57, 'Lucas Juan Hernández', 'juan', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/juan/802.jpg', 1, '2022-12-22 13:11:16', '2022-12-22 18:14:26'),
-(58, 'Daniel Julio García', 'julio', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'Administrador', 'vistas/img/usuarios/julio/728.jpg', 1, '2022-12-22 13:12:51', '2022-12-22 18:12:51'),
-(59, 'Abel Ana Martínez', 'ana', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/ana/678.jpg', 1, '2017-12-26 19:21:40', '2022-12-22 18:17:48');
+(1, 'Administrador', 'admin', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Vendedor', 'vistas/img/usuarios/admin/649.jpg', 1, '2023-01-17 20:09:35', '2023-01-18 01:09:35'),
+(57, 'Lucas Juan Hernández', 'juan', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/juan/802.jpg', 1, '2023-01-17 20:09:52', '2023-01-18 01:09:52'),
+(58, 'Daniel Julio García', 'julio', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'Administrador', 'vistas/img/usuarios/julio/728.jpg', 1, '2022-12-22 13:12:51', '2022-12-22 23:12:51'),
+(59, 'Abel Ana Martínez', 'ana', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/ana/678.jpg', 1, '2017-12-26 19:21:40', '2022-12-22 23:17:48');
 
 -- --------------------------------------------------------
 
@@ -208,11 +286,11 @@ CREATE TABLE `ventas` (
   `codigo` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `id_vendedor` int(11) NOT NULL,
-  `productos` text COLLATE utf8_spanish_ci NOT NULL,
+  `productos` text NOT NULL,
   `impuesto` float NOT NULL,
   `neto` float NOT NULL,
   `total` float NOT NULL,
-  `metodo_pago` text COLLATE utf8_spanish_ci NOT NULL,
+  `metodo_pago` text NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -273,10 +351,35 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `donaciones`
+--
+ALTER TABLE `donaciones`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `informacion`
+--
+ALTER TABLE `informacion`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `terrenos`
+--
+ALTER TABLE `terrenos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `foreingKey_beneficiario` (`id_beneficiario`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -298,7 +401,7 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -307,10 +410,34 @@ ALTER TABLE `clientes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT de la tabla `donaciones`
+--
+ALTER TABLE `donaciones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `informacion`
+--
+ALTER TABLE `informacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT de la tabla `terrenos`
+--
+ALTER TABLE `terrenos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

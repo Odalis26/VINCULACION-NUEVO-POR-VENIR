@@ -13,7 +13,7 @@ if ($_SESSION["perfil"] == "Especial") {
 <div class="content-wrapper" style="background-color:#FFFFFF">
 
   <section class="content-header" style="background-color:#FFFFFF">
-    <h1 style="color:orange; font-family: monospace; font-weight: bold;">
+    <h1 style="color:#615e9b; font-family: monospace; font-weight: bold;">
       Administrar página estática
     </h1>
     <ol class="breadcrumb" style="background-color:#FFFFFF">
@@ -89,7 +89,7 @@ MODAL EDITAR CATEGORÍA
 
       <form role="form" method="post" enctype="multipart/form-data">
 
-        <div class="modal-header" style="background:orange; color:white">
+        <div class="modal-header" style="background:#615e9b; color:white">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Editar información </h4>
@@ -106,9 +106,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
-                    class="fa fa-clipboard"></i></span>
-                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" style="background-color: #ffba6a;  color: black; border:none" required>
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
+                    class="fa fa-home"></i></span>
+                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" style="background-color: #615e9b;  color: azure; border:none" required>
                 <input type="hidden" name="idInformacion" id="idInformacion" required>
 
               </div>
@@ -121,9 +121,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarMision" id="editarMision" rows="5" style="background-color: #ffba6a;  color: black; border:none"
+                <textarea class="form-control input-lg" name="editarMision" id="editarMision" rows="5" style="background-color: #615e9b;  color: azure; border:none"
                   required></textarea>
 
               </div>
@@ -136,9 +136,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarVision" id="editarVision" rows="5" style="background-color: #ffba6a;  color: black; border:none"
+                <textarea class="form-control input-lg" name="editarVision" id="editarVision" rows="5" style="background-color: #615e9b;  color: azure; border:none"
                   required></textarea>
 
               </div>
@@ -151,9 +151,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarQuienesSomos" id="editarQuienesSomos" rows="5" style="background-color: #ffba6a;  color: black; border:none"
+                <textarea class="form-control input-lg" name="editarQuienesSomos" id="editarQuienesSomos" rows="5" style="background-color: #615e9b;  color: azure; border:none"
                   required></textarea>
 
               </div>
@@ -166,9 +166,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-phone"></i></span>
-                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" style="background-color: #ffba6a;  color: black; border:none" required>
+                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" style="background-color: #615e9b;  color: azure; border:none" required>
 
               </div>
 
@@ -180,9 +180,9 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px orange solid;"><i
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-envelope"></i></span>
-                <input type="text" class="form-control input-lg" name="editarCorreo" id="editarCorreo" style="background-color: #ffba6a;  color: black; border:none" required>
+                <input type="text" class="form-control input-lg" name="editarCorreo" id="editarCorreo" style="background-color: #615e9b;  color: azure; border:none" required>
 
               </div>
 
@@ -193,15 +193,10 @@ MODAL EDITAR CATEGORÍA
             <div class="form-group">
 
               <div class="panel" style="background:white; color:black; border: 2px white solid;">SUBIR IMAGEN</div>
-
               <input type="file" class="nuevoLogo" name="nuevoLogo" accept="image/*"
-                style="background:orange; color:white;">
-
-              <p class="help-block"></p>
-
+                style="background:#615e9b; color:white;">
               <img src="vistas/img/logo/default/logo-default.jpg" style="border: none; background-color:white;"
                 class="img-thumbnail previsualizarEditar" width="180px">
-
               <input type="hidden" name="logoActual" id="logoActual">
 
             </div>
@@ -215,7 +210,7 @@ MODAL EDITAR CATEGORÍA
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
             style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
           <button type="submit" class="btn btn-primary"
-            style="background:orange; color:white; border: 2px orange solid;">Guardar cambios</button>
+            style="background:#615e9b; color:white; border: 2px #615e9b solid;">Guardar cambios</button>
 
         </div>
 
