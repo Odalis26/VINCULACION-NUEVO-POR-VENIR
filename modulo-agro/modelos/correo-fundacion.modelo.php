@@ -2,20 +2,20 @@
 
 require_once "conexion.php";
 
-class ModeloTelefonoFundacion
+class ModeloCorreoFundacion
 {
 
 	/*=============================================
-	CREAR TELEFONO
+	CREAR CORREO
 	=============================================*/
 
-	static public function mdlIngresarTelefono($tabla, $datos)
+	static public function mdlIngresarCorreo($tabla, $datos)
 	{
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_informacion,telefono) VALUES (:id_informacion,:telefono)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_informacion,correo) VALUES (:id_informacion,:correo)");
 
 		$stmt->bindParam(":id_informacion", $datos["id_informacion"], PDO::PARAM_INT);
-		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
 
 		if ($stmt->execute()) {
 
@@ -33,10 +33,10 @@ class ModeloTelefonoFundacion
 	}
 
 	/*=============================================
-	MOSTRAR TELEFONOS
+	MOSTRAR CORREOS
 	=============================================*/
 
-	static public function mdlMostrarTelefonos($tabla, $item, $valor)
+	static public function mdlMostrarCorreos($tabla, $item, $valor)
 	{
 
 		if ($item != null) {
@@ -66,15 +66,15 @@ class ModeloTelefonoFundacion
 	}
 
 	/*=============================================
-	EDITAR TELEFONO
+	EDITAR CORREO
 	=============================================*/
 
-	static public function mdlEditarTelefono($tabla, $datos)
+	static public function mdlEditarCorreo($tabla, $datos)
 	{
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET telefono = :telefono WHERE id = :id");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET correo = :correo WHERE id = :id");
 
-		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
 		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
 
 		if ($stmt->execute()) {
@@ -93,10 +93,10 @@ class ModeloTelefonoFundacion
 	}
 
 	/*=============================================
-	BORRAR TELEFONO
+	BORRAR CORREO
 	=============================================*/
 
-	static public function mdlBorrarTelefono($tabla, $datos)
+	static public function mdlBorrarCorreo($tabla, $datos)
 	{
 
 		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");

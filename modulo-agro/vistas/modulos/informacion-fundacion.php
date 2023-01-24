@@ -25,21 +25,20 @@ if ($_SESSION["perfil"] == "Especial") {
   <section class="content" style="background-color:#FFFFFF">
 
     <!-- INFORMACION GENERAL  -->
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:#FFFFFF; border: 1px white solid;">
 
-      <div class="box-body" style="background-color:white; color:black; border: 2px white solid;">
+      <div class="box-body" style="background-color:white; color:black; border: 1px white solid;">
 
         <table class="table table-bordered table-striped dt-responsive tablas" width="100%"
           style="background-color:white; color:black; border: none;">
 
-          <thead style="background-color:white; color:black; border: 2px white solid;">
+          <thead style="background-color:white; color:black; border: 1px white solid;">
             <h3 style="color:#615e9b;">Información general</h3>
             <tr>
-              <th style="width:10%;">Nombre</th>
-              <th style="width:20%;">Misión</th>
-              <th style="width:20%;">Visión</th>
-              <th style="width:20%;">Quiénes somos</th>
-              <th style="width:10%;">Correo</th>
+              <th style="width:15%;">Nombre</th>
+              <th style="width:30%;">Misión</th>
+              <th style="width:30%;">Visión</th>
+              <th style="width:30%;">Quiénes somos</th>
               <th style="">Logo</th>
             </tr>
           </thead>
@@ -51,13 +50,12 @@ if ($_SESSION["perfil"] == "Especial") {
             $informacion = ControladorInformacion::ctrMostrarInformacion($item, $valor);
 
             foreach ($informacion as $key => $value) {
-              echo '<td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $value["nombre"] . '</td>
-            <td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $value["mision"] . '</td>
-            <td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $value["vision"] . '</td>
-                    <td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $value["quienes_somos"] . '</td>
-                    <td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $value["correo"] . '</td>
-                    <td><img src="' . $value["logo"] . '" width="120px"></td>
-                    <td style="width:10px; background-color:white; color:black; border: 2px white solid;">
+              echo '<td style="background-color:white; color:black; border: 1px white solid;">' . $value["nombre"] . '</td>
+            <td style="background-color:white; color:black; border: 1px white solid;">' . $value["mision"] . '</td>
+            <td style="background-color:white; color:black; border: 1px white solid;">' . $value["vision"] . '</td>
+                    <td style=" background-color:white; color:black; border: 1px white solid;">' . $value["quienes_somos"] . '</td>
+                    <td><img src="' . $value["logo"] . '" width="150px"></td>
+                    <td style="width:10px; background-color:white; color:black; border: 1px white solid;">
                     <div class="btn-group" >
                         <button class="btn btn-warning btnEditarInformacion" style="background:#63FC00; color:black; border: 2px #63FC00 solid;" idInformacion="' . $value["id"] . '" data-toggle="modal" data-target="#modalEditarInformacion"><i class="fa fa-pencil"></i></button>
                     </div>
@@ -74,17 +72,17 @@ if ($_SESSION["perfil"] == "Especial") {
     </div>
 
     <!-- TELEFONO -->
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:#FFFFFF; border: 1px white solid;">
 
 
-      <div class="box-body" style="background-color:white; color:black; border: 2px white solid;">
+      <div class="box-body" style="background-color:white; color:black; border: 1px white solid;">
 
         <table class="table table-bordered table-striped dt-responsive tablaTelefono" width="100%"
           style="background-color:white; color:black; border: 1px black solid;">
 
-          <thead style="background-color:white; color:black; border: 2px white solid;">
-            <h3 style="color:#615e9b;">Teléfono</h3>
-            <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
+          <thead style="background-color:white; color:black; border: 1px white solid;">
+            <h3 style="color:#615e9b;">Teléfonos</h3>
+            <div class="box-header with-border" style="background-color:white; border: 1px white solid;">
 
               <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarTelefono"
                 style="background-color:#615e9b; color:white; border: 2px #615e9b solid;">
@@ -108,14 +106,67 @@ if ($_SESSION["perfil"] == "Especial") {
 
             foreach ($telefono as $key => $numero) {
               echo '
-                    <td style="width:10px; background-color:white; color:black; border: 2px white solid;">' . $numero["telefono"] . '</td>
-                    <td style="width:10px; background-color:white; color:black; border: 2px white solid;">
+                    <td style="width:10px; background-color:white; color:black; border: 1px white solid;">' . $numero["telefono"] . '</td>
+                    <td style="width:10px; background-color:white; color:black; border: 1px white solid;">
                     <div class="btn-group" >
                         <button class="btn btn-warning btnEditarTelefono" style="background:#63FC00; color:black; border: 2px #63FC00 solid;" idTelefono="' . $numero["id"] . '" data-toggle="modal" data-target="#modalEditarTelefono"><i class="fa fa-pencil"></i></button>
                         <button class="btn btn-danger btnEliminarTelefono" style="background:#6A0436; color:white; border: 2px #6A0436 solid;" idTelefono="' . $numero["id"] . '"><i class="fa fa-times"></i></button>
                     </div>
                     </td>
                   </tr>';
+            }
+            ?>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+    <!-- CORREO -->
+    <div class="box" style="background-color:#FFFFFF; border: 1px white solid;">
+
+
+      <div class="box-body" style="background-color:white; color:black; border: 1px white solid;">
+
+        <table class="table table-bordered table-striped dt-responsive tablaCorreo" width="100%"
+          style="background-color:white; color:black; border: 1px black solid;">
+
+          <thead style="background-color:white; color:black; border: 1px white solid;">
+            <h3 style="color:#615e9b;">Correos</h3>
+            <div class="box-header with-border" style="background-color:white; border: 1px white solid;">
+
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCorreo"
+                style="background-color:#615e9b; color:white; border: 2px #615e9b solid;">
+
+                Agregar correo
+
+              </button>
+
+            </div>
+
+            <tr>
+              <th style="width:10%;">Correo</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php
+            $item = null;
+            $valor = null;
+            $correoFundacion = ControladorCorreoFundacion::ctrMostrarCorreos($item, $valor);
+
+            foreach ($correoFundacion as $key => $correo) {
+              echo '
+              <td style="width:10px; background-color:white; color:black; border: 1px white solid;">' . $correo["correo"] . '</td>
+              <td style="width:10px; background-color:white; color:black; border: 1px white solid;">
+              <div class="btn-group" >
+                  <button class="btn btn-warning btnEditarCorreo" style="background:#63FC00; color:black; border: 2px #63FC00 solid;" idCorreo="' . $correo["id"] . '" data-toggle="modal" data-target="#modalEditarCorreo"><i class="fa fa-pencil"></i></button>
+                  <button class="btn btn-danger btnEliminarCorreo" style="background:#6A0436; color:white; border: 2px #6A0436 solid;" idCorreo="' . $correo["id"] . '"><i class="fa fa-times"></i></button>
+              </div>
+              </td>
+            </tr>';
             }
             ?>
           </tbody>
@@ -151,7 +202,7 @@ MODAL EDITAR PAGINA ESTATICA
 
         <div class="modal-body" style="background:white; color:white">
 
-          <div class="box-body" style="background:white; color:white; border: 2px white solid;">
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
 
             <!-- ENTRADA PARA EL NOMBRE -->
 
@@ -214,26 +265,11 @@ MODAL EDITAR PAGINA ESTATICA
 
             </div>
 
-            <!-- ENTRADA PARA EL CORREO -->
-
-            <div class="form-group" style="background:white; color:white">
-
-              <div class="input-group">
-
-                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
-                    class="fa fa-envelope"></i></span>
-                <input type="text" class="form-control input-lg" name="editarCorreo" id="editarCorreo"
-                  style="background-color: #615e9b;  color: azure; border:none" required>
-
-              </div>
-
-            </div>
-
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
 
-              <div class="panel" style="background:white; color:black; border: 2px white solid;">SUBIR IMAGEN</div>
+              <div class="panel" style="background:white; color:black; border: 1px white solid;">SUBIR IMAGEN</div>
               <input type="file" class="nuevoLogo" name="nuevoLogo" accept="image/*"
                 style="background:#615e9b; color:white;">
               <img src="vistas/img/logo/default/logo-default.jpg" style="border: none; background-color:white;"
@@ -246,7 +282,7 @@ MODAL EDITAR PAGINA ESTATICA
 
         </div>
 
-        <div class="modal-footer" style="background-color:white; color:black; border: 2px white solid;">
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
             style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
@@ -267,6 +303,7 @@ MODAL EDITAR PAGINA ESTATICA
   </div>
 
 </div>
+
 
 <!--=====================================
 MODAL AGREGAR TELEFONO
@@ -298,7 +335,7 @@ MODAL AGREGAR TELEFONO
 
         <div class="modal-body" style="background:white; color:white">
 
-          <div class="box-body" style="background:white; color:white; border: 2px white solid;">
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
             <br>
             <!-- ENTRADA PARA EL NUMERO -->
 
@@ -309,7 +346,7 @@ MODAL AGREGAR TELEFONO
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-phone"></i></span>
                 <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar telefono"
-                style="background-color: #615e9b;  color: azure; border:none;" required>
+                  style="background-color: #615e9b;  color: azure; border:none;" required>
                 <input type="hidden" name="idInformacion" id="idInformacion" required>
 
               </div>
@@ -324,7 +361,7 @@ MODAL AGREGAR TELEFONO
         PIE DEL MODAL
         ======================================-->
 
-        <div class="modal-footer" style="background-color:white; color:black; border: 2px white solid;">
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
             style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
@@ -348,7 +385,6 @@ MODAL AGREGAR TELEFONO
   </div>
 
 </div>
-
 
 <!--=====================================
 MODAL EDITAR TELEFONO
@@ -380,7 +416,7 @@ MODAL EDITAR TELEFONO
 
         <div class="modal-body" style="background:white; color:white">
 
-          <div class="box-body" style="background:white; color:white; border: 2px white solid;">
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
             <br>
 
             <!-- ENTRADA PARA EL NUMERO -->
@@ -407,7 +443,7 @@ MODAL EDITAR TELEFONO
         PIE DEL MODAL
         ======================================-->
 
-        <div class="modal-footer" style="background-color:white; color:black; border: 2px white solid;">
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
             style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
@@ -432,9 +468,185 @@ MODAL EDITAR TELEFONO
 
 </div>
 
+
+<!--=====================================
+MODAL AGREGAR CORREO
+======================================-->
+
+<div id="modalAgregarCorreo" class="modal fade" role="dialog">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post">
+
+        <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+        <div class="modal-header" style="background:#615e9b; color:white">
+
+          <button type="button" class="close" data-dismiss="modal" style="color:black">&times;</button>
+
+          <h4 class="modal-title">Agregar correo</h4>
+
+        </div>
+
+        <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+        <div class="modal-body" style="background:white; color:white">
+
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
+            <br>
+            <!-- ENTRADA PARA EL CORREO -->
+
+            <div class="form-group" style="background:white; color:white">
+
+              <div class="input-group">
+
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
+                    class="fa fa-phone"></i></span>
+                <input type="email" class="form-control input-lg" name="nuevoCorreo" placeholder="Ingresar correo"
+                  style="background-color: #615e9b;  color: azure; border:none;" required>
+                
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
+
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
+            style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
+
+          <button type="submit" class="btn btn-primary"
+            style="background:#615e9b; color:white; border: 2px #615e9b solid;">Guardar correo</button>
+
+        </div>
+
+        <?php
+
+        $crearCorreo = new ControladorCorreoFundacion();
+        $crearCorreo->ctrCrearCorreo();
+
+        ?>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--=====================================
+MODAL EDITAR CORREO
+======================================-->
+
+<div id="modalEditarCorreo" class="modal fade" role="dialog">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post">
+
+        <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+        <div class="modal-header" style="background:#615e9b; color:white">
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title">Editar correo</h4>
+
+        </div>
+
+        <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+        <div class="modal-body" style="background:white; color:white">
+
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
+            <br>
+
+            <!-- ENTRADA PARA EL CORREO -->
+
+            <div class="form-group" style="background:white; color:white">
+
+              <div class="input-group">
+
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
+                    class="fa fa-phone"></i></span>
+                <input type="text" class="form-control input-lg" name="editarCorreo" id="editarCorreo"
+                  style="background-color: #615e9b;  color: azure; border:none;" required>
+                <input type="hidden" name="idCorreo" id="idCorreo" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
+
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
+            style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
+
+          <button type="submit" class="btn btn-primary"
+            style="background:#615e9b; color:white; border: 2px #615e9b solid;">Guardar cambios</button>
+
+        </div>
+
+        <?php
+
+        $editarCorreo = new ControladorCorreoFundacion();
+        $editarCorreo->ctrEditarCorreo();
+
+        ?>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--=====================================
+ ELIMINAR TELEFONO
+======================================-->
 <?php
 
 $borrarTelefono = new ControladorTelefonoFundacion();
 $borrarTelefono->ctrBorrarTelefono();
+
+?>
+
+<!--=====================================
+ ELIMINAR CORREO
+======================================-->
+<?php
+
+$borrarCorreo = new ControladorCorreoFundacion();
+$borrarCorreo->ctrBorrarCorreo();
 
 ?>

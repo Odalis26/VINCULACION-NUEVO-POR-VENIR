@@ -27,8 +27,7 @@ class ControladorInformacion
 						"nombre" => $_POST["editarNombre"],
 						"mision" => $_POST["editarMision"],
 						"vision" => $_POST["editarVision"],
-						"quienes_somos" => $_POST["editarQuienesSomos"],
-						"correo" => $_POST["editarCorreo"],
+						"quienes_somos" => $_POST["editarQuienesSomos"]
 					);
 
 					$respuesta = ModeloInformacion::mdlEditarInformacion($tabla, $datos);
@@ -71,7 +70,6 @@ class ControladorInformacion
 						"mision" => $_POST["editarMision"],
 						"vision" => $_POST["editarVision"],
 						"quienes_somos" => $_POST["editarQuienesSomos"],
-						"correo" => $_POST["editarCorreo"],
 						"logo" => $nuevoLogo
 					);
 

@@ -1,18 +1,18 @@
 <?php
 
-class ControladorTelefonoFundacion
+class ControladorCorreoFundacion
 {
 
 	/*=============================================
-	CREAR TELEFONOS FUNDACION
+	CREAR CORREOS FUNDACION
 	=============================================*/
 
-	static public function ctrCrearTelefono()
+	static public function ctrCrearCorreo()
 	{
 
-		if (isset($_POST["nuevoTelefono"])) {
+		if (isset($_POST["nuevoCorreo"])) {
 
-			if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ+() ]+$/', $_POST["nuevoTelefono"])) {
+			if (preg_match('/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i', $_POST["nuevoCorreo"])) {
 
 				$item = null;
 				$valor = null;
@@ -21,14 +21,14 @@ class ControladorTelefonoFundacion
 					$value["id"];
 				}
 				$idInformacion = $value["id"];
-				$tabla = "telefono_fundacion";
+				$tabla = "correo_fundacion";
 
 				$datos = array(
-					"telefono" => $_POST["nuevoTelefono"],
+					"correo" => $_POST["nuevoCorreo"],
 					"id_informacion" => $idInformacion 
 				);
 
-				$respuesta = ModeloTelefonoFundacion::mdlIngresarTelefono($tabla, $datos);
+				$respuesta = ModeloCorreoFundacion::mdlIngresarCorreo($tabla, $datos);
 
 				if ($respuesta == "ok") {
 
@@ -36,7 +36,7 @@ class ControladorTelefonoFundacion
 
 					swal({
 						  type: "success",
-						  title: "El teléfono ha sido creado correctamente",
+						  title: "El correo ha sido creado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
@@ -58,7 +58,7 @@ class ControladorTelefonoFundacion
 
 					swal({
 						  type: "error",
-						  title: "¡El teléfono no puede ir vacío!",
+						  title: "¡El correo no puede no válido!",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
@@ -81,43 +81,57 @@ class ControladorTelefonoFundacion
 	MOSTRAR CATEGORIAS
 	=============================================*/
 
-	static public function ctrMostrarTelefonos($item, $valor)
+	static public function ctrMostrarCorreos($item, $valor)
 	{
 
-		$tabla = "telefono_fundacion";
+		$tabla = "correo_fundacion";
 
-		$respuesta = ModeloTelefonoFundacion::mdlMostrarTelefonos($tabla, $item, $valor);
+		$respuesta = ModeloCorreoFundacion::mdlMostrarCorreos($tabla, $item, $valor);
 
 		return $respuesta;
 
 	}
 
 	/*=============================================
-	EDITAR TELEFONO
+	EDITAR Correo
 	=============================================*/
 
-	static public function ctrEditarTelefono()
+	static public function ctrEditarCorreo()
 	{
 
-		if (isset($_POST["editarTelefono"])) {
+		if (isset($_POST["editarCorreo"])) {
 
-			if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ+() ]+$/', $_POST["editarTelefono"])) {
+			if (preg_match('/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i', $_POST["editarCorreo"])) {
 
-				$tabla = "telefono_fundacion";
+				$tabla = "correo_fundacion";
 
 				$datos = array(
-					"telefono" => $_POST["editarTelefono"],
-					"id" => $_POST["idTelefono"]
+					"correo" => $_POST["editarCorreo"],
+					"id" => $_POST["idCorreo"]
 				);
 
-				function write_to_console($data) {
-					$console = $data;
-					if (is_array($console))
-					$console = implode(',', $console);
-				   
-					echo "<script>console.log('Console: " . $console . "' );</script>";
-				   }
-				   write_to_console($datos);
+				$respuesta = ModeloCorreoFundacion::mdlEditarCorreo($tabla, $datos);
+
+				if ($respuesta == "ok") {
+
+					echo '<script>
+
+					swal({
+						  type: "success",
+						  title: "El correo ha sido cambiado correctamente",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result){
+									if (result.value) {
+
+									window.location = "informacion-fundacion";
+
+									}
+								})
+
+					</script>';
+
+				}
 
 
 			} else {
@@ -126,7 +140,7 @@ class ControladorTelefonoFundacion
 
 					swal({
 						  type: "error",
-						  title: "¡El teléfono no puede ir vacío!",
+						  title: "¡El correo no puede ir vacío!",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
@@ -146,18 +160,18 @@ class ControladorTelefonoFundacion
 	}
 
 	/*=============================================
-	BORRAR TELEFONO
+	BORRAR Correo
 	=============================================*/
 
-	static public function ctrBorrarTelefono()
+	static public function ctrBorrarCorreo()
 	{
 
-		if (isset($_GET["idTelefono"])) {
+		if (isset($_GET["idCorreo"])) {
 
-			$tabla = "telefono_fundacion";
-			$datos = $_GET["idTelefono"];
+			$tabla = "correo_fundacion";
+			$datos = $_GET["idCorreo"];
 
-			$respuesta = ModeloTelefonoFundacion::mdlBorrarTelefono($tabla, $datos);
+			$respuesta = ModeloCorreoFundacion::mdlBorrarCorreo($tabla, $datos);
 
 			if ($respuesta == "ok") {
 
@@ -165,7 +179,7 @@ class ControladorTelefonoFundacion
 
 					swal({
 						  type: "success",
-						  title: "El teléfono ha sido borrado correctamente",
+						  title: "El correo ha sido borrado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){

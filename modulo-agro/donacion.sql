@@ -111,16 +111,6 @@ CREATE TABLE `galeria` (
 -- Estructura de tabla para la tabla `informacion`
 --
 
-CREATE TABLE `informacion` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `mision` longtext NOT NULL,
-  `vision` longtext NOT NULL,
-  `quienes_somos` longtext NOT NULL,
-  `numero` varchar(15) NOT NULL,
-  `correo` varchar(30) NOT NULL,
-  `logo` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -215,8 +205,6 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 -- Volcado de datos para la tabla `informacion`
 --
 
-INSERT INTO `informacion` (`id`, `nombre`, `mision`, `vision`, `quienes_somos`, `numero`, `correo`, `logo`) VALUES
-(1, 'Fundación Nuevo Porvenir', 'm Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', 'v Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', 'qs Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam libero, facere, cupiditate ipsam mollitia nam natus ad iste nulla deleniti, voluptatum et maxime. Nulla corporis aspernatur deleniti commodi sit.', '+593976810545', 'contact@example.com', 'vistas/img/logo/logo.jpeg');
 
 -- --------------------------------------------------------
 
@@ -364,9 +352,6 @@ ALTER TABLE `galeria`
 
 --
 -- Indices de la tabla `informacion`
---
-ALTER TABLE `informacion`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `productos`
@@ -423,9 +408,6 @@ ALTER TABLE `galeria`
 
 --
 -- AUTO_INCREMENT de la tabla `informacion`
---
-ALTER TABLE `informacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
