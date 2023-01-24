@@ -177,12 +177,65 @@ if ($_SESSION["perfil"] == "Especial") {
 
     </div>
 
+    <!-- DIRECCION -->
+    <div class="box" style="background-color:#FFFFFF; border: 1px white solid;">
+
+
+      <div class="box-body" style="background-color:white; color:black; border: 1px white solid;">
+
+        <table class="table table-bordered table-striped dt-responsive tablaDireccion" width="100%"
+          style="background-color:white; color:black; border: 1px black solid;">
+
+          <thead style="background-color:white; color:black; border: 1px white solid;">
+            <h3 style="color:#615e9b;">Direcciónes</h3>
+            <div class="box-header with-border" style="background-color:white; border: 1px white solid;">
+
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarDireccion"
+                style="background-color:#615e9b; color:white; border: 2px #615e9b solid;">
+
+                Agregar dirección
+
+              </button>
+
+            </div>
+
+            <tr>
+              <th style="width:30%;">Dirección</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php
+            $item = null;
+            $valor = null;
+            $direccionFundacion = ControladorDireccionFundacion::ctrMostrarDirecciones($item, $valor);
+
+            foreach ($direccionFundacion as $key => $direccion) {
+              echo '
+        <td style="width:10px; background-color:white; color:black; border: 1px white solid;">' . $direccion["direccion"] . '</td>
+        <td style="width:10px; background-color:white; color:black; border: 1px white solid;">
+        <div class="btn-group" >
+            <button class="btn btn-warning btnEditarDireccion" style="background:#63FC00; color:black; border: 2px #63FC00 solid;" idDireccion="' . $direccion["id"] . '" data-toggle="modal" data-target="#modalEditarDireccion"><i class="fa fa-pencil"></i></button>
+            <button class="btn btn-danger btnEliminarDireccion" style="background:#6A0436; color:white; border: 2px #6A0436 solid;" idDireccion="' . $direccion["id"] . '"><i class="fa fa-times"></i></button>
+        </div>
+        </td>
+      </tr>';
+            }
+            ?>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
   </section>
 
 </div>
 
 <!--=====================================
-MODAL EDITAR PAGINA ESTATICA
+MODAL EDITAR INFORMACION PAGINA ESTATICA
 ======================================-->
 
 <div id="modalEditarInformacion" class="modal fade" role="dialog">
@@ -228,7 +281,7 @@ MODAL EDITAR PAGINA ESTATICA
 
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarMision" id="editarMision" rows="5"
+                <textarea class="form-control input-lg" name="editarMision" id="editarMision" rows="6"
                   style="background-color: #615e9b;  color: azure; border:none" required></textarea>
 
               </div>
@@ -243,7 +296,7 @@ MODAL EDITAR PAGINA ESTATICA
 
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarVision" id="editarVision" rows="5"
+                <textarea class="form-control input-lg" name="editarVision" id="editarVision" rows="6"
                   style="background-color: #615e9b;  color: azure; border:none" required></textarea>
 
               </div>
@@ -258,7 +311,7 @@ MODAL EDITAR PAGINA ESTATICA
 
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
                     class="fa fa-users"></i></span>
-                <textarea class="form-control input-lg" name="editarQuienesSomos" id="editarQuienesSomos" rows="5"
+                <textarea class="form-control input-lg" name="editarQuienesSomos" id="editarQuienesSomos" rows="6"
                   style="background-color: #615e9b;  color: azure; border:none" required></textarea>
 
               </div>
@@ -508,10 +561,10 @@ MODAL AGREGAR CORREO
               <div class="input-group">
 
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
-                    class="fa fa-phone"></i></span>
+                    class="fa fa-envelope"></i></span>
                 <input type="email" class="form-control input-lg" name="nuevoCorreo" placeholder="Ingresar correo"
                   style="background-color: #615e9b;  color: azure; border:none;" required>
-                
+
               </div>
 
             </div>
@@ -589,7 +642,7 @@ MODAL EDITAR CORREO
               <div class="input-group">
 
                 <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
-                    class="fa fa-phone"></i></span>
+                    class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control input-lg" name="editarCorreo" id="editarCorreo"
                   style="background-color: #615e9b;  color: azure; border:none;" required>
                 <input type="hidden" name="idCorreo" id="idCorreo" required>
@@ -631,6 +684,169 @@ MODAL EDITAR CORREO
 
 </div>
 
+
+<!--=====================================
+MODAL AGREGAR DIRECCION
+======================================-->
+
+<div id="modalAgregarDireccion" class="modal fade" role="dialog">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post">
+
+        <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+        <div class="modal-header" style="background:#615e9b; color:white">
+
+          <button type="button" class="close" data-dismiss="modal" style="color:black">&times;</button>
+
+          <h4 class="modal-title">Agregar dirección</h4>
+
+        </div>
+
+        <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+        <div class="modal-body" style="background:white; color:white">
+
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
+            <br>
+            <!-- ENTRADA PARA LA DIRECCION -->
+
+            <div class="form-group" style="background:white; color:white">
+
+              <div class="input-group">
+
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
+                    class="fa fa-map-marker"></i></span>
+                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección"
+                  style="background-color: #615e9b;  color: azure; border:none;" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
+
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
+            style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
+
+          <button type="submit" class="btn btn-primary"
+            style="background:#615e9b; color:white; border: 2px #615e9b solid;">Guardar dirección</button>
+
+        </div>
+
+        <?php
+
+        $crearCorreo = new ControladorDireccionFundacion();
+        $crearCorreo->ctrCrearDireccion();
+
+        ?>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--=====================================
+MODAL EDITAR DIRECCION
+======================================-->
+
+<div id="modalEditarDireccion" class="modal fade" role="dialog">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post">
+
+        <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+        <div class="modal-header" style="background:#615e9b; color:white">
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title">Editar dirección</h4>
+
+        </div>
+
+        <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+        <div class="modal-body" style="background:white; color:white">
+
+          <div class="box-body" style="background:white; color:white; border: 1px white solid;">
+            <br>
+
+            <!-- ENTRADA PARA EL CORREO -->
+
+            <div class="form-group" style="background:white; color:white">
+
+              <div class="input-group">
+
+                <span class="input-group-addon" style="background:white; color:black; border: 2px #615e9b solid;"><i
+                    class="fa fa-map-marker"></i></span>
+                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion"
+                  style="background-color: #615e9b;  color: azure; border:none;" required>
+                <input type="hidden" name="idDireccion" id="idDireccion" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+        <div class="modal-footer" style="background-color:white; color:black; border: 1px white solid;">
+
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"
+            style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
+
+          <button type="submit" class="btn btn-primary"
+            style="background:#615e9b; color:white; border: 2px #615e9b solid;">Guardar cambios</button>
+
+        </div>
+
+        <?php
+
+        $editarDireccion = new ControladorDireccionFundacion();
+        $editarDireccion->ctrEditarDireccion();
+
+        ?>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
 <!--=====================================
  ELIMINAR TELEFONO
 ======================================-->
@@ -648,5 +864,15 @@ $borrarTelefono->ctrBorrarTelefono();
 
 $borrarCorreo = new ControladorCorreoFundacion();
 $borrarCorreo->ctrBorrarCorreo();
+
+?>
+
+<!--=====================================
+ ELIMINAR DIRECCION
+======================================-->
+<?php
+
+$borrarDireccion = new ControladorDireccionFundacion();
+$borrarDireccion->ctrBorrarDireccion();
 
 ?>

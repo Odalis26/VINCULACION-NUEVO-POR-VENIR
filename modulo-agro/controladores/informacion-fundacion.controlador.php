@@ -2,6 +2,9 @@
 
 class ControladorInformacion
 {
+	/*=============================================
+	MOSTRAR INFORMACION
+	=============================================*/
 	static public function ctrMostrarInformacion($item, $valor)
 	{
 
@@ -12,6 +15,10 @@ class ControladorInformacion
 		return $respuesta;
 
 	}
+
+	/*=============================================
+	EDITAR INFORMACION
+	=============================================*/
 	static public function ctrEditarInformacion()
 	{
 
@@ -54,7 +61,7 @@ class ControladorInformacion
 					}
 
 				} else {
-					$newCode = mt_rand(0001,9999);
+					$newCode = mt_rand(0001, 9999);
 					$logo = $_FILES["nuevoLogo"]["name"];
 					$path = $_FILES["nuevoLogo"]["tmp_name"];
 					$directorio = "vistas/img/logo/" . $newCode . "/";

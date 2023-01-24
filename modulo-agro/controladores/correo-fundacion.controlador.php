@@ -4,7 +4,7 @@ class ControladorCorreoFundacion
 {
 
 	/*=============================================
-	CREAR CORREOS FUNDACION
+	CREAR CORREO 
 	=============================================*/
 
 	static public function ctrCrearCorreo()
@@ -78,7 +78,7 @@ class ControladorCorreoFundacion
 	}
 
 	/*=============================================
-	MOSTRAR CATEGORIAS
+	MOSTRAR CORREOS
 	=============================================*/
 
 	static public function ctrMostrarCorreos($item, $valor)
@@ -93,7 +93,7 @@ class ControladorCorreoFundacion
 	}
 
 	/*=============================================
-	EDITAR Correo
+	EDITAR CORREO
 	=============================================*/
 
 	static public function ctrEditarCorreo()
@@ -160,7 +160,7 @@ class ControladorCorreoFundacion
 	}
 
 	/*=============================================
-	BORRAR Correo
+	BORRAR CORREO
 	=============================================*/
 
 	static public function ctrBorrarCorreo()

@@ -54,6 +54,7 @@ $(".tablas").on("click", "button.btnEditarInformacion", function () {
 	})
 })
 
+
 /*=============================================
 EDITAR TELEFONO
 =============================================*/
@@ -110,6 +111,7 @@ $(".tablaTelefono").on("click", "button.btnEliminarTelefono", function () {
 
 })
 
+
 /*=============================================
 EDITAR CORREO
 =============================================*/
@@ -165,4 +167,62 @@ $(".tablaCorreo").on("click", "button.btnEliminarCorreo", function () {
 	})
 
 })
+
+
+/*=============================================
+EDITAR DIRECCION
+=============================================*/
+$(".tablaDireccion").on("click", "button.btnEditarDireccion", function () {
+
+	var idDireccion = $(this).attr("idDireccion");
+
+	var datosDireccion = new FormData();
+	datosDireccion.append("idDireccion", idDireccion);
+
+	$.ajax({
+		url: "ajax/direccion-fundacion.ajax.php",
+		method: "POST",
+		data: datosDireccion,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function (respuestaDireccion) {
+			$("#editarDireccion").val(respuestaDireccion["direccion"]);
+			$("#idDireccion").val(respuestaDireccion["id"]);
+		}
+		
+	})
+
+
+})
+
+/*=============================================
+ELIMINAR DIRECCION
+=============================================*/
+$(".tablaDireccion").on("click", "button.btnEliminarDireccion", function () {
+
+	var idDireccion = $(this).attr("idDireccion");
+
+	swal({
+		title: '¿Está seguro de borrar la dirección?',
+		text: "¡Si no lo está puede cancelar la acción!",
+		type: 'warning',
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		cancelButtonText: 'Cancelar',
+		confirmButtonText: 'Si, borrar dirección!'
+	}).then(function (result) {
+
+		if (result.value) {
+
+			window.location = "index.php?ruta=informacion-fundacion&idDireccion=" + idDireccion;
+
+		}
+
+	})
+
+})
+
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2023 a las 17:10:54
+-- Tiempo de generación: 24-01-2023 a las 21:02:07
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -85,6 +85,45 @@ INSERT INTO `clientes` (`id`, `nombre`, `documento`, `email`, `telefono`, `direc
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `correo_fundacion`
+--
+
+CREATE TABLE `correo_fundacion` (
+  `id` int(11) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `correo_fundacion`
+--
+
+INSERT INTO `correo_fundacion` (`id`, `correo`, `id_informacion`) VALUES
+(1, 'fundnuevoporvenir@gmail.com', 1),
+(2, 'diegoyanez1@gmail.com', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `direccion_fundacion`
+--
+
+CREATE TABLE `direccion_fundacion` (
+  `id` int(11) NOT NULL,
+  `direccion` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `direccion_fundacion`
+--
+
+INSERT INTO `direccion_fundacion` (`id`, `direccion`, `id_informacion`) VALUES
+(1, 'Oficina Sur: O’Leary N° Oe8-103 y Punaes', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `donaciones`
 --
 
@@ -108,9 +147,24 @@ CREATE TABLE `galeria` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `informacion`
+-- Estructura de tabla para la tabla `informacion_fundacion`
 --
 
+CREATE TABLE `informacion_fundacion` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `mision` longtext NOT NULL,
+  `vision` longtext NOT NULL,
+  `quienes_somos` longtext NOT NULL,
+  `logo` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `informacion_fundacion`
+--
+
+INSERT INTO `informacion_fundacion` (`id`, `nombre`, `mision`, `vision`, `quienes_somos`, `logo`) VALUES
+(1, 'Fundación Nuevo Porvenir', 'Somos una fundación orientada a promover el Desarrollo Integral de la comunidad, las \r\ninstituciones y las empresas ecuatorianas, brindando productos servicios de soporte y \r\nacompañamiento empresarial, capacitación y consultoría para la gestión, acceso a las \r\ntecnologías de información y construcción de redes de negocios.  Contamos con Talento \r\nHumano  de  excelencia  e  infraestructura  física  y  tecnológica  de  última  generación; trabajamos  con  ética,  solidaridad,  equidad,  compromiso,  calidad  y  responsabilidad \r\nsocial.', 'Convertirnos  en  una  organización  de  vanguardia  con  reconocimiento  nacional  e \r\ninternacional  que  busca  desarrollar  soluciones  innovadoras  para  mejorar  la \r\nproductividad Integral de la comunidad, las instituciones y las empresas ecuatorianas y \r\ndel mundo.', 'La Fundación Nuevo Porvenir, es una organización orientada a Servir a las personas de \r\nnuestra comunidad, las instituciones, las empresas del Ecuador y del mundo. Nuestro \r\ninterés es lograr la satisfacción de sus necesidades con productos y servicios de calidad.', 'vistas/img/logo/logo.jpeg');
 
 -- --------------------------------------------------------
 
@@ -202,9 +256,23 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 -- --------------------------------------------------------
 
 --
--- Volcado de datos para la tabla `informacion`
+-- Estructura de tabla para la tabla `telefono_fundacion`
 --
 
+CREATE TABLE `telefono_fundacion` (
+  `id` int(11) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `telefono_fundacion`
+--
+
+INSERT INTO `telefono_fundacion` (`id`, `telefono`, `id_informacion`) VALUES
+(1, '023171516', 1),
+(2, '0999408469', 1),
+(3, '0998735356', 1);
 
 -- --------------------------------------------------------
 
@@ -339,6 +407,20 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
+
+--
+-- Indices de la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
+
+--
 -- Indices de la tabla `donaciones`
 --
 ALTER TABLE `donaciones`
@@ -351,13 +433,23 @@ ALTER TABLE `galeria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `informacion`
+-- Indices de la tabla `informacion_fundacion`
+--
+ALTER TABLE `informacion_fundacion`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
 
 --
 -- Indices de la tabla `terrenos`
@@ -395,6 +487,18 @@ ALTER TABLE `clientes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT de la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `donaciones`
 --
 ALTER TABLE `donaciones`
@@ -407,13 +511,22 @@ ALTER TABLE `galeria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `informacion`
+-- AUTO_INCREMENT de la tabla `informacion_fundacion`
+--
+ALTER TABLE `informacion_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT de la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `terrenos`
@@ -432,6 +545,28 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `ventas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  ADD CONSTRAINT `correo_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
+
+--
+-- Filtros para la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  ADD CONSTRAINT `direccion_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
+
+--
+-- Filtros para la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  ADD CONSTRAINT `telefono_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
