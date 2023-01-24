@@ -25,7 +25,7 @@ class ControladorTelefonoFundacion
 
 				$datos = array(
 					"telefono" => $_POST["nuevoTelefono"],
-					"id_informacion" => $idInformacion 
+					"id_informacion" => $idInformacion
 				);
 
 				$respuesta = ModeloTelefonoFundacion::mdlIngresarTelefono($tabla, $datos);
@@ -110,14 +110,28 @@ class ControladorTelefonoFundacion
 					"id" => $_POST["idTelefono"]
 				);
 
-				function write_to_console($data) {
-					$console = $data;
-					if (is_array($console))
-					$console = implode(',', $console);
-				   
-					echo "<script>console.log('Console: " . $console . "' );</script>";
-				   }
-				   write_to_console($datos);
+				$respuesta = ModeloTelefonoFundacion::mdlEditarTelefono($tabla, $datos);
+
+				if ($respuesta == "ok") {
+
+					echo '<script>
+
+					swal({
+						  type: "success",
+						  title: "El teléfono ha sido cambiado correctamente",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result){
+									if (result.value) {
+
+									window.location = "informacion-fundacion";
+
+									}
+								})
+
+					</script>';
+
+				}
 
 
 			} else {
