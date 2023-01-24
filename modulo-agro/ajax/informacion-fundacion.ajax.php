@@ -1,7 +1,7 @@
 <?php
 
-require_once "../controladores/informacion.controlador.php";
-require_once "../modelos/informacion.modelo.php";
+require_once "../controladores/informacion-fundacion.controlador.php";
+require_once "../modelos/informacion-fundacion.modelo.php";
 
 class AjaxInformacion
 {

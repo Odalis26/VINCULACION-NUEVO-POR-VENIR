@@ -5,7 +5,7 @@ class ControladorInformacion
 	static public function ctrMostrarInformacion($item, $valor)
 	{
 
-		$tabla = "informacion";
+		$tabla = "informacion_fundacion";
 
 		$respuesta = ModeloInformacion::mdlMostrarInformacion($tabla, $item, $valor);
 
@@ -20,7 +20,7 @@ class ControladorInformacion
 			if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarNombre"])) {
 
 				if (!$_FILES['nuevoLogo']['error'] == 0) {
-					$tabla = "informacion";
+					$tabla = "informacion_fundacion";
 
 					$datos = array(
 						"id" => $_POST["idInformacion"],
@@ -28,7 +28,6 @@ class ControladorInformacion
 						"mision" => $_POST["editarMision"],
 						"vision" => $_POST["editarVision"],
 						"quienes_somos" => $_POST["editarQuienesSomos"],
-						"numero" => $_POST["editarTelefono"],
 						"correo" => $_POST["editarCorreo"],
 					);
 
@@ -46,7 +45,7 @@ class ControladorInformacion
 						   }).then(function(result){
 									 if (result.value) {
 	
-									 window.location = "informacion";
+									 window.location = "informacion-fundacion";
 	
 									 }
 								 })
@@ -64,7 +63,7 @@ class ControladorInformacion
 					$nuevoLogo = $directorio . $logo;
 					copy($path, $nuevoLogo);
 
-					$tabla = "informacion";
+					$tabla = "informacion_fundacion";
 
 					$datos = array(
 						"id" => $_POST["idInformacion"],
@@ -72,7 +71,6 @@ class ControladorInformacion
 						"mision" => $_POST["editarMision"],
 						"vision" => $_POST["editarVision"],
 						"quienes_somos" => $_POST["editarQuienesSomos"],
-						"numero" => $_POST["editarTelefono"],
 						"correo" => $_POST["editarCorreo"],
 						"logo" => $nuevoLogo
 					);
@@ -91,7 +89,7 @@ class ControladorInformacion
 						   }).then(function(result){
 									 if (result.value) {
 	
-									 window.location = "informacion";
+									 window.location = "informacion-fundacion";
 	
 									 }
 								 })
@@ -113,7 +111,7 @@ class ControladorInformacion
 						  }).then(function(result){
 							if (result.value) {
 
-							window.location = "informacion";
+							window.location = "informacion-fundadcion";
 
 							}
 						})
