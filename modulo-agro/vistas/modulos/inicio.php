@@ -1,14 +1,9 @@
+<br>
+
 <div class="content-wrapper" style="background-color:white; color:#800080;">
 
   <section class="content-header" style="background-color:white; color:#800080;">
-    
-    <h1>
-      
-      Tablero
-      
-      <small>Panel de Control</small>
-    
-    </h1>
+    <br><br><br><br><br>
 
     <ol class="breadcrumb">
       

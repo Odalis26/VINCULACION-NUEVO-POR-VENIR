@@ -13,6 +13,7 @@ if ($_SESSION["perfil"] == "Vendedor") {
 
 ?>
 
+<br><br><br><br>
 <div class="content-wrapper" style="background-color:white">
 
   <section class="content-header" style="background-color:white">
@@ -25,7 +26,7 @@ if ($_SESSION["perfil"] == "Vendedor") {
 
     <ol class="breadcrumb" style="background-color:white">
 
-      <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
+      <li><a href="inicio" style="background-color:white;color:black"><i class="fa fa-dashboard"></i> Inicio</a></li>
 
       <li class="active">Administrar categorías</li>
 
@@ -39,7 +40,7 @@ if ($_SESSION["perfil"] == "Vendedor") {
 
       <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
 
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCategoria" style="background-color:#04FA00; color:black; border: 2px #04FA00 solid;">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCategoria" style="background-color:#1F8708; color:#00FF00; border: 2px #04FA00 solid;">
 
           Agregar categoría
 
@@ -128,7 +129,7 @@ MODAL AGREGAR CATEGORÍA
         CABEZA DEL MODAL
         ======================================-->
 
-        <div class="modal-header" style="background:#04FA00; color:black">
+        <div class="modal-header" style="background:#1F8708; color:#00FF00">
 
           <button type="button" class="close" data-dismiss="modal" style="color:black">&times;</button>
 
@@ -150,9 +151,9 @@ MODAL AGREGAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:#4CEB02; color:black; border: 2px #4CEB02 solid;"><i class="fa fa-th"></i></span>
+                <span class="input-group-addon" style="background:#1F8708; color:#00FF00; border: 2px #1F8708 solid;"><i class="fa fa-th"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoría" style="border: 2px #4CEB02 solid; background:white;color:black;" required>
+                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoría" style="border: 2px #00FF00 solid; background:white;color:black;" required>
 
               </div>
 
@@ -170,7 +171,7 @@ MODAL AGREGAR CATEGORÍA
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
 
-          <button type="submit" class="btn btn-primary" style="background:#4CEB02; color:black; border: 2px #4CEB02 solid;">Guardar categoría</button>
+          <button type="submit" class="btn btn-primary" style="background:#1F8708; color:#00FF00; border: 2px #4CEB02 solid;">Guardar categoría</button>
 
         </div>
 
@@ -205,7 +206,7 @@ MODAL EDITAR CATEGORÍA
         CABEZA DEL MODAL
         ======================================-->
 
-        <div class="modal-header" style="background:#63FC00; color:black">
+        <div class="modal-header" style="background:#1F8708; color:#00FF00">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -228,7 +229,7 @@ MODAL EDITAR CATEGORÍA
 
               <div class="input-group">
 
-                <span class="input-group-addon" style="background:white; color:black; border: 2px #63FC00 solid;"><i class="fa fa-th"></i></span>
+                <span class="input-group-addon" style="background:#1F8708; color:#63FC00; border: 2px transparent solid;"><i class="fa fa-th"></i></span>
 
                 <input type="text" class="form-control input-lg" name="editarCategoria" id="editarCategoria" style="border: 2px #63FC00 solid; background:#63FC00;color:black;" required>
 
@@ -250,7 +251,7 @@ MODAL EDITAR CATEGORÍA
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
 
-          <button type="submit" class="btn btn-primary" style="background:#4CEB02; color:black; border: 2px #63FC00 solid;">Guardar cambios</button>
+          <button type="submit" class="btn btn-primary" style="background:#00FF00; color:black; border: 2px #63FC00 solid;">Guardar cambios</button>
 
         </div>
 

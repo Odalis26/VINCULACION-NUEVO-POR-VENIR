@@ -1,92 +1,94 @@
  <header style="background-color:#031466;" class="main-header">
- 	
-	<!--=====================================
+
+ 	<!--=====================================
 	LOGOTIPO
 	======================================-->
-	<a href="inicio" class="logo">
-		
-		<!-- logo mini -->
-		<span class="logo-mini">
-			
-			<img src="vistas/img/plantilla/" class="img-responsive" style="padding:10px">
+ 	<a href="inicio" class="logo" style="height:185px; background-color:white">
 
-		</span>
+ 		<!-- logo mini -->
+ 		<span class="logo-mini">
 
-		<!-- logo normal -->
 
-		<span class="logo-lg">
-			
-			<img src="vistas/img/plantilla/" class="img-responsive" style="padding:10px 0px; width: 200px; height:50px">
+ 		</span>
 
-		</span>
+ 		<!-- logo normal -->
 
-	</a>
+ 		<span class="logo-lg">
 
-	<!--=====================================
+ 			<img src="vistas/img/plantilla/logo.jpeg" class="img-responsive" style="padding:50px 0px; width: 200px; height:185px;">
+
+ 		</span>
+
+ 	</a>
+
+ 	<!--=====================================
 	BARRA DE NAVEGACIÓN
 	======================================-->
-	<nav class="navbar navbar-static-top" role="navigation">
-		
-		<!-- Botón de navegación -->
+ 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;">
 
-	 	<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        	
-        	<span class="sr-only">Toggle navigation</span>
-      	
-      	</a>
+ 		<!-- Botón de navegación -->
 
-		<!-- perfil de usuario -->
+ 		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="background-color: white;color:black">
 
-		<div class="navbar-custom-menu">
-				
-			<ul class="nav navbar-nav">
-				
-				<li class="dropdown user user-menu">
-					
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+ 			<span class="sr-only">Toggle navigation</span>
 
-					<?php
+ 		</a>
 
-					if($_SESSION["foto"] != ""){
+ 		<!-- perfil de usuario -->
 
-						echo '<img src="'.$_SESSION["foto"].'" class="user-image">';
+ 		<div class="navbar-custom-menu">
 
-					}else{
+ 			<ul class="nav navbar-nav">
 
+ 				<li class="dropdown user user-menu">
 
-						echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
+ 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color:white;border:white 7px solid;color:black ">
 
-					}
+ 						<?php
+
+							if ($_SESSION["foto"] != "") {
+
+								echo '<img src="' . $_SESSION["foto"] . '" class="user-image">';
+							} else {
 
 
-					?>
-						
-						<span class="hidden-xs"><?php  echo $_SESSION["nombre"]; ?></span>
+								echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
+							}
 
-					</a>
 
-					<!-- Dropdown-toggle -->
+							?>
 
-					<ul class="dropdown-menu">
-						
-						<li class="user-body">
-							
-							<div class="pull-right">
-								
-								<a href="salir" class="btn btn-default btn-flat">Salir</a>
+ 						<span class="hidden-xs"><?php echo $_SESSION["nombre"]; ?></span>
 
-							</div>
+ 					</a>
 
-						</li>
+ 					<!-- Dropdown-toggle -->
 
-					</ul>
+ 					<ul class="dropdown-menu" style="background-color:transparent;border:transparent 7px solid; width:150px">
 
-				</li>
+ 						<li class="user-body" style="position:relative; top: -27px;left:10px;background-color:transparent;border:white 7px solid; width:150px">
 
-			</ul>
 
-		</div>
 
-	</nav>
+ 							<a href="salir" class="btn btn-default btn-flat">Salir</a>
+
+
+
+ 						</li>
+
+ 					</ul>
+
+ 				</li>
+
+ 			</ul>
+
+ 		</div>
+
+ 		<img src="vistas/img/plantilla/logo.jpeg" class="img-responsive" style="padding-top:30px;width: 200px; height:100px;position:relative; left:620px">
+
+ 		<p style="background-color: white;color:#031466; font-size:20px;text-align:center;font-weight:bolder">nuevo porvenir</p>
+ 		<p style="padding-top: 10px;background-color: white;color:#08D52A; font-size:15px;text-align:center;font-weight:bolder">FUNDACIÓN PARA LA AYUDA Y EL DESARROLLO SOCIAL</p>
+
+ 	</nav>
 
  </header>

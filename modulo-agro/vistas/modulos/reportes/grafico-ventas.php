@@ -50,17 +50,17 @@ GRÁFICO DE DONACIONES
 ======================================-->
 
 
-<div class="box box-solid bg-teal-gradient" style="background-color:white; color:#800080;">
+<div class="box box-solid bg-teal-gradient" style="background-color:white; color:#330470;width:1170px; left:100px">
 	
-	<div class="box-header" style="background-color:black; color:#00e7ff;">
+	<div class="box-header" style="background-color:#330470; color:#FF5822;border: 2px solid #FF5822; color:#FF5822;border-bottom: 2px solid transparent;">
 		
- 		<i class="fa fa-th" style="color:#00e7ff;"></i>
+ 		<i class="fa fa-th" style="color:#FF5822;"></i>
 
   		<h3 class="box-title" style="font-weight: 700;">Gráfico de donaciones</h3>
 
 	</div>
 
-	<div class="box-body border-radius-none nuevoGraficoVentas" style="background-color:white; color:#800080;">
+	<div class="box-body border-radius-none nuevoGraficoVentas" style="background-color:white; color:#800080;border: 2px solid #FF5822;border-top: 2px solid transparent;">
 
 		<div class="chart" id="line-chart-ventas" style="height: 250px; color:#00FF00;"></div>
 
@@ -100,14 +100,14 @@ GRÁFICO DE DONACIONES
     xkey             : 'y',
     ykeys            : ['donaciones'],
     labels           : ['donaciones'],
-    lineColors       : ['#00e7ff'],
+    lineColors       : ['#FF5822'],
     lineWidth        : 2,
     hideHover        : 'auto',
-    gridTextColor    : 'black',
+    gridTextColor    : '#330470',
     gridStrokeWidth  : 0.4,
     pointSize        : 4,
-    pointStrokeColors: ['#00e7ff'],
-    gridLineColor    : 'black',
+    pointStrokeColors: ['#FF5822'],
+    gridLineColor    : '#330470',
     gridTextFamily   : 'Open Sans',
     preUnits         : '$',
     gridTextSize     : 10

@@ -23,6 +23,7 @@ if($xml){
 }
 
 ?>
+<br><br><br><br>
 <div class="content-wrapper" style="background-color:#FFFFFF">
 
   <section class="content-header" style="background-color:#FFFFFF">
@@ -35,7 +36,7 @@ if($xml){
 
     <ol class="breadcrumb" style="background-color:#FFFFFF">
       
-      <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
+      <li><a href="inicio" style="background-color:white;color:black"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
       <li class="active">Administrar donaciones</li>
     

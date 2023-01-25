@@ -1,19 +1,22 @@
+
+
+
 <aside class="main-sidebar"  style="background-color:white;">
 
 	 <section class="sidebar"  style="background-color:white;">
 
-		<ul class="sidebar-menu"  style="background-color:#ff1493;">
+		<ul class="sidebar-menu"  style="background-color:white;">
 
 		<?php
 
 		if($_SESSION["perfil"] == "Administrador"){
 
-			echo '<li class="active">
+			echo '<br><br><br><br><br><br><br><li class="active">
 
-				<a href="inicio"  style="background-color:black;font-weight: bold;">
+				<a href="inicio"  style="background-color:#330470;font-weight: bold;">
 
-					<i class="fa fa-home"></i>
-					<span>Inicio</span>
+					<i class="fa fa-home"  style="color:#00FF00"></i>
+					<span style="color:#00FF00">Inicio</span>
 
 				</a>
 
@@ -23,8 +26,8 @@
 
 				<a href="usuarios"  style="background-color:#04246E;font-weight: bold;">
 
-					<i class="fa fa-user"></i>
-					<span>Usuarios</span>
+					<i class="fa fa-user"  style="color:#F5EA04"></i>
+					<span style="color:#F5EA04">Usuarios</span>
 
 				</a>
 
@@ -34,12 +37,12 @@
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
 
-			echo '<li>
+			echo '<br><br><br><br><br><br><br><li>
 
-				<a href="categorias"  style="background-color:#04FA00;color:black;font-weight: bold;">
+				<a href="categorias"  style="background-color:#1F8708;color:black;font-weight: bold;">
 
-					<i class="fa fa-th"></i>
-					<span>Categorías</span>
+					<i class="fa fa-th" style="color:#00FF00"></i>
+					<span style="color:#00FF00">Categorías</span>
 
 				</a>
 
@@ -47,10 +50,10 @@
 
 			<li>
 
-				<a href="productos"  style="background-color:#ff1493;font-weight: bold;">
+				<a href="productos"  style="background-color:#02016D;font-weight: bold;">
 
-					<i class="fa fa-product-hunt"></i>
-					<span>Productos</span>
+					<i class="fa fa-product-hunt" style="color:#FF0074"></i>
+					<span style="color:#FF0074">Productos</span>
 
 				</a>
 
@@ -60,12 +63,12 @@
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
 
-			echo '<li>
+			echo '<br><br><br><br><br><br><br><li>
 
-				<a href="clientes"  style="background-color:#FFC301;color:black;font-weight: bold;">
+				<a href="clientes"  style="background-color:#D59408;color:black;font-weight: bold;">
 
-					<i class="fa fa-users"></i>
-					<span>Beneficiarios</span>
+					<i class="fa fa-users" style="color:#F5EA04"></i>
+					<span style="color:#F5EA04">Beneficiarios</span>
 
 				</a>
 
@@ -77,28 +80,28 @@
 
 			echo '<li class="treeview">
 
-				<a href="ventas"  style="background-color:#03A5C2;font-weight: bold;">
+				<a href="ventas"  style="background-color:#330470;font-weight: bold;">
 
-					<i class="fa fa-list-ul"  style="background-color:#03A5C2;"></i>
+					<i class="fa fa-list-ul"  style="background-color:#330470;color:#FF5822"></i>
 					
-					<span  style="background-color:#03A5C2;">Donaciones</span>
+					<span  style="background-color:#330470;color:#FF5822">Donaciones</span>
 					
-					<span class="pull-right-container"  style="background-color:#03A5C2;">
+					<span class="pull-right-container"  style="background-color:#330470;">
 					
-						<i class="fa fa-angle-left pull-right"  style="background-color:#03A5C2;"></i>
+						<i class="fa fa-angle-left pull-right"  style="background-color:#330470;color:#FF5822"></i>
 
 					</span>
 
 				</a>
 
-				<ul class="treeview-menu" style="background-color:#03A5C2;">
+				<ul class="treeview-menu" style="background-color:#330470;">
 					
 					<li>
 
-						<a href="ventas"  style="background-color:#03A5C2;font-weight: bold;">
+						<a href="ventas"  style="background-color:#330470;font-weight: bold;">
 							
-							<i class="fa fa-circle-o"></i>
-							<span>Administrar</span>
+							<i class="fa fa-circle-o" style="color:#FF5822"></i>
+							<span style="color:#FF5822">Administrar</span>
 
 						</a>
 
@@ -106,10 +109,10 @@
 
 					<li>
 
-						<a href="crear-venta"  style="background-color:#03A5C2;font-weight: bold;">
+						<a href="crear-venta"  style="background-color:#330470;font-weight: bold;">
 							
-							<i class="fa fa-circle-o"></i>
-							<span>Crear donación</span>
+							<i class="fa fa-circle-o" style="color:#FF5822"></i>
+							<span style="color:#FF5822">Crear donación</span>
 
 						</a>
 
@@ -119,10 +122,10 @@
 
 					echo '<li>
 
-						<a href="reportes"  style="background-color:#03A5C2;font-weight: bold;">
+						<a href="reportes"  style="background-color:#330470;font-weight: bold;">
 							
-							<i class="fa fa-circle-o"></i>
-							<span>Reporte </span>
+							<i class="fa fa-circle-o" style="color:#FF5822"></i>
+							<span style="color:#FF5822">Reporte </span>
 
 						</a>
 

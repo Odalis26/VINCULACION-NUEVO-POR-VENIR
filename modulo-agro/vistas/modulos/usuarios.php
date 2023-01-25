@@ -13,7 +13,9 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
-<div class="content-wrapper" style="background-color:white">
+
+<br><br><br><br>
+<div class="content-wrapper" style="background-color:white; position:relative; width:500px; left:900px">
 
   <section class="content-header" style="background-color:white">
     
@@ -25,7 +27,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
     <ol class="breadcrumb" style="background-color:white">
       
-      <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
+      <li><a href="inicio" style="background-color:white;color:black"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
       <li class="active">Administrar usuarios</li>
     
@@ -39,7 +41,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
       <div class="box-header with-border" style="background-color:white; border: 2px white solid;">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario" style="background-color:#04246E; color:white; border: 2px #04246E solid;">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario" style="background-color:#04246E; color:#F5EA04; border: 2px #04246E solid;">
           
           Agregar usuario
 
@@ -155,9 +157,9 @@ MODAL AGREGAR USUARIO
 
         <div class="modal-header" style="background:#04246E; color:white">
 
-          <button type="button" style="color:white;" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" style="color:#F5EA04;" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar usuario</h4>
+          <h4 class="modal-title"  style="color:#F5EA04;">Agregar usuario</h4>
 
         </div>
 
@@ -175,7 +177,7 @@ MODAL AGREGAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
+                <span class="input-group-addon" style="background:#04246E; color:#F5EA04; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" style="border: 2px #04246E solid;background:white;color:#04246E;" required>
 
@@ -189,7 +191,7 @@ MODAL AGREGAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
+                <span class="input-group-addon" style="background:#04246E; color:#F5EA04; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" style="border: 2px #04246E solid;background:white;color:#04246E;" required>
 
@@ -203,7 +205,7 @@ MODAL AGREGAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
+                <span class="input-group-addon" style="background:#04246E; color:#F5EA04; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
 
                 <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" style="border: 2px #04246E solid; background:white;color:#04246E;" required>
 
@@ -217,7 +219,7 @@ MODAL AGREGAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:#04246E; color:white; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
+                <span class="input-group-addon" style="background:#04246E; color:#F5EA04; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
 
                 <select class="form-control input-lg" name="nuevoPerfil" style="background:white; color:#04246E; border: 2px #04246E solid; ">
                   
@@ -261,7 +263,7 @@ MODAL AGREGAR USUARIO
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
 
-          <button type="submit" class="btn btn-primary" style="background:#04246E; color:white; border: 2px #04246E solid;">Guardar usuario</button>
+          <button type="submit" class="btn btn-primary" style="background:#04246E; color:#F5EA04; border: 2px #04246E solid;">Guardar usuario</button>
 
         </div>
 
@@ -300,7 +302,7 @@ MODAL EDITAR USUARIO
 
           <button type="button" class="close" data-dismiss="modal" style="background:#04246E; color:white">&times;</button>
 
-          <h4 class="modal-title" style="background:#04246E;">Editar usuario</h4>
+          <h4 class="modal-title" style="background:#04246E;color:#F5EA04;">Editar usuario</h4>
 
         </div>
 
@@ -318,9 +320,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-user"></i></span> 
+                <span class="input-group-addon" style="background:#F5EA04; color:#04246E; border: 2px transparent solid;"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="border: 2px #04246E solid;background:#04246E;color:white;" required>
+                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" style="border: 2px #F5EA04 solid;background:#04246E;color:white;" required>
 
               </div>
 
@@ -332,9 +334,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-key"></i></span> 
+                <span class="input-group-addon" style="background:#F5EA04; color:#04246E; border: 2px transparent solid;"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario"  value="" style="border: 2px #04246E solid;background:white;color:#04246E;" readonly>
+                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario"  value="" style="border: 2px #F5EA04 solid;background:white;color:#04246E;" readonly>
 
               </div>
 
@@ -346,9 +348,9 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-lock"></i></span> 
+                <span class="input-group-addon" style="background:#F5EA04; color:#04246E; border: 2px transparent solid;"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="border: 2px #04246E solid;background:#04246E;color:white;">
+                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña" style="border: 2px #F5EA04 solid;background:#04246E;color:white;">
 
                 <input type="hidden" id="passwordActual" name="passwordActual" style="background:#000; color:white;">
 
@@ -362,11 +364,11 @@ MODAL EDITAR USUARIO
               
               <div class="input-group">
               
-                <span class="input-group-addon" style="background:white; color:#04246E; border: 2px #04246E solid;"><i class="fa fa-users"></i></span> 
+                <span class="input-group-addon" style="background:#F5EA04; color:#04246E; border: 2px transparent solid;"><i class="fa fa-users"></i></span> 
 
-                <select class="form-control input-lg" name="editarPerfil" style="border: 2px #04246E solid;background:#04246E;color:white;">
+                <select class="form-control input-lg" name="editarPerfil" style="border: 2px #F5EA04 solid;background:#04246E;color:white;">
                   
-                  <option value="" id="editarPerfil" style="background:white;border: 2px #04246E solid;color:#04246E"></option>
+                  <option value="" id="editarPerfil" style="background:white;border: 2px #F5EA04 solid;color:#04246E"></option>
 
                   <option value="Administrador">Administrador</option>
 
@@ -386,11 +388,11 @@ MODAL EDITAR USUARIO
               
               <div class="panel" style="background:white; color:#04246E; border: 2px white solid;">SUBIR FOTO</div>
 
-              <input type="file" class="nuevaFoto" name="editarFoto" style="background:#04246E; color:white; border: 2px #04246E solid;">
+              <input type="file" class="nuevaFoto" name="editarFoto" style="background:#F5EA04; color:#04246E; border: 2px #F5EA04 solid;">
 
               <p class="help-block">Peso máximo de la foto 2MB</p>
 
-              <img src="vistas/img/usuarios/default/anonymous.png" style="background:#04246E; color:#04246E; border: 2px #04246E solid;" class="img-thumbnail previsualizarEditar" width="130px">
+              <img src="vistas/img/usuarios/default/anonymous.png" style="background:#F5EA04; color:#04246E; border: 2px #F5EA04 solid;" class="img-thumbnail previsualizarEditar" width="130px">
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 
@@ -408,7 +410,7 @@ MODAL EDITAR USUARIO
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="background:#6A0436; color:white; border: 2px #6A0436 solid;">Salir</button>
 
-          <button type="submit" class="btn btn-primary" style="background:#04246E; color:white; border: 2px #04246E solid;">Modificar usuario</button>
+          <button type="submit" class="btn btn-primary" style="background:#F5EA04; color:#04246E; border: 2px #F5EA04 solid;">Modificar usuario</button>
 
         </div>
 

@@ -9,15 +9,15 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
  ?>
 
 
-<div class="box box-primary">
+<div class="box box-primary"style="border: 2px solid #FF0074;width:580px; left:-78px">
 
-  <div class="box-header with-border" style="color:black; background-color:#023C55;">
+  <div class="box-header with-border" style="color:black; background-color:#FF0074;">
 
     <h3 class="box-title" style="color:#FFFFFF;font-weight:bolder">Productos añadidos recientemente</h3>
 
     <div class="box-tools pull-right">
 
-      <button type="button" class="btn btn-box-tool" data-widget="collapse" style="background-color:#A97B02;">
+      <button type="button" class="btn btn-box-tool" data-widget="collapse" style="background-color:#02016D;">
 
         <i class="fa fa-minus"></i>
 
@@ -33,7 +33,7 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   </div>
   
-  <div class="box-body">
+  <div class="box-body" style="color:#FFFFFF;background-color:#02016D">
 
     <ul class="products-list product-list-in-box">
 
@@ -45,13 +45,13 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
         <div class="product-img">
 
-        <img src="'.$productos[$i]["imagen"].'" alt="Product Image" style="margin-right:10px;width:120px; background-color:#07D5C2; color: #050005;">
+        <img src="'.$productos[$i]["imagen"].'" alt="Product Image" style="margin-right:10px;width:120px; background-color:#02016D; color: #050005;">
 
         </div>
 
         <div class="product-info">
 
-          <a href="" class="product-title" style="color:#FFFFFF;">
+          <a href="" class="product-title" style="color:#FFFFFF;background-color:#02016D">
 
             '.$productos[$i]["descripcion"].'
 
@@ -71,9 +71,9 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   </div>
 
-  <div class="box-footer text-center"  style="color:black; background-color:#D5073C;">
+  <div class="box-footer text-center"  style="color:black; background-color:#FF0074;">
 
-    <a href="productos" class="uppercase"  style="background-color:#D5073C;">Ver todos los productos</a>
+    <a href="productos" class="uppercase"  style="background-color:#FF0074;">Ver todos los productos</a>
   
   </div>
 
