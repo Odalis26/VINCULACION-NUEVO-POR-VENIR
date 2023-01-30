@@ -10,7 +10,7 @@
 
 			echo '<li class="active">
 
-				<a href="inicio"  style="background-color:black;">
+				<a href="inicios"  style="background-color:black;">
 
 					<i class="fa fa-home"></i>
 					<span>Inicio</span>
@@ -66,6 +66,16 @@
 
 					<i class="fa fa-users"></i>
 					<span>Beneficiarios</span>
+
+				</a>
+
+			</li>
+			<li>
+
+				<a href="terrenos"  style="background-color:#E9967A;color:black">
+
+					<i class="fa fa-area-chart"></i>
+					<span>terrenos</span>
 
 				</a>
 
