@@ -4,7 +4,7 @@
  	<!--=====================================
 	BARRA DE NAVEGACIÓN
 	======================================-->
- 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;height:0px;">
+ 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;height:opx">
 
  		<!-- Botón de navegación -->
 

@@ -1,4 +1,5 @@
 <?php
+
 use Mike42\Escpos\Printer;
 use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\PrintConnectors\FilePrintConnector;
@@ -35,6 +36,7 @@ class ControladorVentas{
 			if($_POST["listaProductos"] == ""){
 
 					echo'<script>
+
 				swal({
 					  type: "error",
 					  title: "La  donación no se ha ejecuta si no hay productos",
@@ -42,9 +44,12 @@ class ControladorVentas{
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
 								if (result.value) {
+
 								window.location = "ventas";
+
 								}
 							})
+
 				</script>';
 
 				return;
@@ -122,7 +127,9 @@ class ControladorVentas{
 			if($respuesta == "ok"){
 	
 				echo'<script>
+
 				localStorage.removeItem("rango");
+
 				swal({
 					  type: "success",
 					  title: "La donación ha sido guardada correctamente",
@@ -130,9 +137,12 @@ class ControladorVentas{
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
 								if (result.value) {
+
 								window.location = "ventas";
+
 								}
 							})
+
 				</script>';
 
 			}
@@ -293,7 +303,9 @@ class ControladorVentas{
 			if($respuesta == "ok"){
 
 				echo'<script>
+
 				localStorage.removeItem("rango");
+
 				swal({
 					  type: "success",
 					  title: "La donación ha sido editada correctamente",
@@ -301,9 +313,12 @@ class ControladorVentas{
 					  confirmButtonText: "Cerrar"
 					  }).then((result) => {
 								if (result.value) {
+
 								window.location = "ventas";
+
 								}
 							})
+
 				</script>';
 
 			}
@@ -435,6 +450,7 @@ class ControladorVentas{
 			if($respuesta == "ok"){
 
 				echo'<script>
+
 				swal({
 					  type: "success",
 					  title: "La donación ha sido borrada correctamente",
@@ -442,9 +458,12 @@ class ControladorVentas{
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
 								if (result.value) {
+
 								window.location = "ventas";
+
 								}
 							})
+
 				</script>';
 
 			}		
@@ -507,6 +526,7 @@ class ControladorVentas{
 			header("Content-Transfer-Encoding: binary");
 		
 			echo utf8_decode("<table border='0'> 
+
 					<tr> 
 					<td style='font-weight:bold; border:1px solid #eee;'>CÓDIGO</td> 
 					<td style='font-weight:bold; border:1px solid #eee;'>BENEFICIARIO</td>

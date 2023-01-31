@@ -1,7 +1,6 @@
+<aside class="main-sidebar"  style="background-color:white;">
 
-<aside class="main-sidebar"  style="background-color:white; ">
-
-	 <section class="sidebar"  style="background-color:white;position:relative; top:130px ">
+	 <section class="sidebar"  style="background-color:white;">
 
 		<ul class="sidebar-menu"  style="background-color:white;">
 

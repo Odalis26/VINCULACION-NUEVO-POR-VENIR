@@ -1,10 +1,30 @@
- <header style="background-color:white; height:0px" class="main-header">
+ <header style="background-color:#031466;" class="main-header">
 
- 	
+ 	<!--=====================================
+	LOGOTIPO
+	======================================-->
+ 	<a href="inicio" class="logo" style="height:185px; background-color:white">
+
+ 		<!-- logo mini -->
+ 		<span class="logo-mini">
+
+
+ 		</span>
+
+ 		<!-- logo normal -->
+
+ 		<span class="logo-lg">
+
+ 			<img src="vistas/img/plantilla/logo.jpeg" class="img-responsive" style="padding:50px 0px; width: 200px; height:185px;">
+
+ 		</span>
+
+ 	</a>
+
  	<!--=====================================
 	BARRA DE NAVEGACIÓN
 	======================================-->
- 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;height:0px;">
+ 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;">
 
  		<!-- Botón de navegación -->
 
@@ -64,7 +84,7 @@
 
  		</div>
 
- 		<img src="vistas/img/logo/logo.jpeg" class="img-responsive" style="padding-top:30px;width: 200px; height:100px;position:relative; left:620px">
+ 		<img src="vistas/img/plantilla/logo.jpeg" class="img-responsive" style="padding-top:30px;width: 200px; height:100px;position:relative; left:620px">
 
  		<p style="background-color: white;color:#031466; font-size:20px;text-align:center;font-weight:bolder">nuevo porvenir</p>
  		<p style="padding-top: 10px;background-color: white;color:#08D52A; font-size:15px;text-align:center;font-weight:bolder">FUNDACIÓN PARA LA AYUDA Y EL DESARROLLO SOCIAL</p>

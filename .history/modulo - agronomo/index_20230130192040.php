@@ -11,7 +11,6 @@ require_once "controladores/informacion-fundacion.controlador.php";
 require_once "controladores/telefono-fundacion.controlador.php";
 require_once "controladores/correo-fundacion.controlador.php";
 require_once "controladores/direccion-fundacion.controlador.php";
-require_once "controladores/plantilla.controlador.php";
 
 require_once "modelos/usuarios.modelo.php";
 require_once "modelos/categorias.modelo.php";
@@ -25,5 +24,4 @@ require_once "modelos/correo-fundacion.modelo.php";
 require_once "modelos/direccion-fundacion.modelo.php";
 require_once "extensiones/vendor/autoload.php";
 
-$plantilla = new ControladorPlantilla();
-$plantilla -> ctrPlantilla();
+require_once "vistas/plantilla.php";

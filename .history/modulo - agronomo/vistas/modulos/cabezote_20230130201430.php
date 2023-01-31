@@ -1,10 +1,10 @@
- <header style="background-color:white; height:0px" class="main-header">
+ <header style="background-color:white;" class="main-header">
 
  	
  	<!--=====================================
 	BARRA DE NAVEGACIÓN
 	======================================-->
- 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;height:0px;">
+ 	<nav class="navbar navbar-static-top" role="navigation" style="background-color: white;">
 
  		<!-- Botón de navegación -->
 

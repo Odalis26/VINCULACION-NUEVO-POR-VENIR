@@ -1,7 +1,6 @@
+<aside class="main-sidebar"  style="background-color:white;">
 
-<aside class="main-sidebar"  style="background-color:white; ">
-
-	 <section class="sidebar"  style="background-color:white;position:relative; top:130px ">
+	 <section class="sidebar"  style="background-color:white;">
 
 		<ul class="sidebar-menu"  style="background-color:white;">
 
@@ -9,7 +8,7 @@
 
 		if($_SESSION["perfil"] == "Administrador"){
 
-			echo '<li class="active">
+			echo '<br><br><br><br><br><br><br><li class="active">
 				<a href="inicio"  style="background-color:#330470;font-weight: bold;">
 					<i class="fa fa-home"  style="color:#00FF00"></i>
 					<span style="color:#00FF00">Inicio</span>
@@ -26,7 +25,7 @@
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
 
-			echo '<li>
+			echo '<br><br><br><br><br><br><br><li>
 				<a href="categorias"  style="background-color:#1F8708;color:black;font-weight: bold;">
 					<i class="fa fa-th" style="color:#00FF00"></i>
 					<span style="color:#00FF00">Categorías</span>
@@ -43,20 +42,10 @@
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Agrónomo"){
 
-			echo '<li>
+			echo '<br><br><br><br><br><br><br><li>
 				<a href="clientes"  style="background-color:#D59408;color:black;font-weight: bold;">
 					<i class="fa fa-users" style="color:#F5EA04"></i>
 					<span style="color:#F5EA04">Beneficiarios</span>
-				</a>
-			</li>';
-
-		}
-		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Agrónomo"){
-
-			echo '<li>
-				<a href="terrenos"  style="background-color:#D59408;color:black;font-weight: bold;">
-					<i class="fa fa-users" style="color:#F5EA04"></i>
-					<span style="color:#F5EA04">Terrenos</span>
 				</a>
 			</li>';
 
@@ -107,7 +96,6 @@
 			</li>';
 
 		}
-		
 		if ($_SESSION["perfil"] == "Administrador") {
 
 			echo '<li class="active">
@@ -117,8 +105,7 @@
 							<span><strong>Página estática</strong></span>
 						</a>
 					</li>';
-		}
-
+				}
 
 		?>
 
