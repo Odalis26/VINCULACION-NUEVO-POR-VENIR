@@ -13,9 +13,9 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
-<div class="content-wrapper" style="background-color:#FFFFFF">
+<div class="content-wrapper" style="background-color:white">
 
-  <section class="content-header" style="background-color:#FFFFFF">
+  <section class="content-header" style="background-color:white">
     
     <h1 style="color:#03A5C2; font-family: monospace; font-weight: bold;">
       
@@ -23,7 +23,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
     
     </h1>
 
-    <ol class="breadcrumb" style="background-color:#FFFFFF">
+    <ol class="breadcrumb" style="background-color:white">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -33,11 +33,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
   </section>
 
-  <section class="content" style="background-color:#FFFFFF">
+  <section class="content" style="background-color:white">
 
-    <div class="box" style="background-color:#FFFFFF; border: 2px white solid;">
+    <div class="box" style="background-color:white; border: 2px white solid;">
 
-      <div class="box-header with-border" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="box-header with-border" style="background-color:white; border: 2px white solid;color:#03A5C2">
 
         <div class="input-group">
 
@@ -67,7 +67,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
         </div>
 
-        <div class="box-tools pull-right">
+        <div class="box-tools pull-right" style="background-color:white; border: 2px white solid;color:#03A5C2">
 
         <?php
 
@@ -91,7 +91,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
          
       </div>
 
-      <div class="box-body" style="background-color:#FFFFFF; border: 2px white solid;">
+      <div class="box-body" style="background-color:white; border: 2px white solid;">
         
         <div class="row">
 

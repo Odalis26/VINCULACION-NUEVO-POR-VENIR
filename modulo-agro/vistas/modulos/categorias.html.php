@@ -1,14 +1,14 @@
-<div class="content-wrapper" style="background-color:#FFFFFF">
+<div class="content-wrapper" style="background-color:white">
 
-  <section class="content-header" style="background-color:#FFFFFF">
+  <section class="content-header" style="background-color:white">
     
-    <h1  style="background-color:#FFFFFF">
+    <h1  style="background-color:white">
       
       Administrar categorías
     
     </h1>
 
-    <ol class="breadcrumb"  style="background-color:#FFFFFF">
+    <ol class="breadcrumb"  style="background-color:white">
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
@@ -18,9 +18,9 @@
 
   </section>
 
-  <section class="content"  style="background-color:#FFFFFF">
+  <section class="content"  style="background-color:white">
 
-    <div class="box"  style="background-color:#FFFFFF">
+    <div class="box"  style="background-color:white">
 
       <div class="box-header with-border">
   

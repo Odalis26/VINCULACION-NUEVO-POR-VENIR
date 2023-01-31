@@ -6958,4 +6958,17 @@ button.close {
     display: none !important;
   }
 }
+td{
+  color:#000
+}
+input.form-control.nuevaDescripcionProducto {
+  color: white;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: rgb(255 255 255);
+  opacity: 1;
+}
+input.form-control.nuevaDescripcionProducto {
+  color: white;
+}
 /*# sourceMappingURL=bootstrap.css.map */

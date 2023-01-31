@@ -19,7 +19,7 @@ foreach ($ventas as $key => $valueVentas) {
         array_push($arrayVendedores, $valueUsuarios["nombre"]);
 
         #Capturamos las nombres y los valores netos en un mismo array
-        $arraylistaVendedores = array($valueUsuarios["nombre"] => $valueVentas["neto"]);
+        $arraylistaVendedores = array($valueUsuarios["nombre"] => $valueVentas["total"]);
 
          #Sumamos los netos de cada vendedor
 
@@ -45,15 +45,15 @@ $noRepetirNombres = array_unique($arrayVendedores);
 DONADORES
 ======================================-->
 
-<div class="box box-success">
+<div class="box box-success" style="background-color: white;border: 4px solid #1e90ff;">
 	
-	<div class="box-header with-border">
+	<div class="box-header with-border" style="background-color: white;border: 2px solid white; color: #1e90ff;">
     
-    	<h3 class="box-title">Usuarios</h3>
+    	<h3 class="box-title" style="font-weight: 700;">Administrador de donaciones</h3>
   
   	</div>
 
-  	<div class="box-body">
+  	<div class="box-body" style="background-color: white;border: 2px solid white;">
   		
 		<div class="chart-responsive">
 			

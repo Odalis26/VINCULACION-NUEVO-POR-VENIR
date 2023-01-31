@@ -10,7 +10,11 @@
 
 			echo '<li class="active">
 
+<<<<<<< HEAD
+				<a href="inicios"  style="background-color:black;">
+=======
 				<a href="inicio"  style="background-color:black;font-weight: bold;">
+>>>>>>> origin/ponce
 
 					<i class="fa fa-home"></i>
 					<span>Inicio</span>
