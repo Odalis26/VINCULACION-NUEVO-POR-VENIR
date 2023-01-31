@@ -227,7 +227,7 @@ MODAL AGREGAR USUARIO
 
                   <option value="Administrador">Administrador</option>
 
-                  <option value="Vendedor">Agrónomo</option>
+                  <option value="Agrónomo">Agrónomo</option>
                   
                   <option value="Especial">Especial</option>
 
@@ -372,7 +372,7 @@ MODAL EDITAR USUARIO
 
                   <option value="Administrador">Administrador</option>
 
-                  <option value="Vendedor">Agrónomo</option>
+                  <option value="Agrónomo">Agrónomo</option>
 
                   <option value="Especial">Especial</option>
 

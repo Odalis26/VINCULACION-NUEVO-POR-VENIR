@@ -61,7 +61,7 @@
 
 		}
 
-		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor" || $_SESSION["perfil"] == "Agrónomo"){
 
 			echo '<br><br><br><br><br><br><br><li>
 
@@ -76,7 +76,7 @@
 
 		}
 
-		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor" || $_SESSION["perfil"] == "Agrónomo"){
 
 			echo '<li class="treeview">
 
