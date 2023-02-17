@@ -187,7 +187,7 @@ if ($_SESSION["perfil"] == "Especial") {
           style="background-color:white; color:black; border: 1px black solid;">
 
           <thead style="background-color:white; color:black; border: 1px white solid;">
-            <h3 style="color:#615e9b;">Direcciónes</h3>
+            <h3 style="color:#615e9b;">Direcciones</h3>
             <div class="box-header with-border" style="background-color:white; border: 1px white solid;">
 
               <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarDireccion"
