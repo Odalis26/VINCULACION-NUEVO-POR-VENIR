@@ -18,7 +18,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
   <section class="content-header" style="background-color:white">
     
-    <h1 style="color:#03A5C2; font-family: monospace; font-weight: bold; position:relative; width:1170px; left:210px">
+    <h1 style="color:#330470; font-family: monospace; font-weight: bold; position:relative; width:1170px; left:210px">
       
       Reportes de donaciones
     
@@ -26,7 +26,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
     <ol class="breadcrumb" style="background-color:white">
       
-      <li><a href="inicio"  style="background-color:white;color:black;"><i class="fa fa-dashboard" ></i> Inicio</a></li>
+      <li><a href="inicio"  style="background-color:white;color:#330470;"><i class="fa fa-dashboard" ></i> Inicio</a></li>
       
       <li class="active">Reportes de donaciones</li>
     

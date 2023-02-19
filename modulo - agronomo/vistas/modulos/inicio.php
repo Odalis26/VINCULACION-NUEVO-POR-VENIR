@@ -79,7 +79,7 @@
            
           <?php
 
-          if($_SESSION["perfil"] =="Especial" || $_SESSION["perfil"] =="Vendedor"){
+          if($_SESSION["perfil"] =="Especial" || $_SESSION["perfil"] =="Agrónomo"){
 
              echo '<div class="box box-success">
 
