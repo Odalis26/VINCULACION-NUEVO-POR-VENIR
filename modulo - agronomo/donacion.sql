@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2023 a las 00:12:03
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 7.4.27
+-- Tiempo de generación: 02-03-2023 a las 18:49:12
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
-  `categoria` text COLLATE utf8_spanish_ci NOT NULL,
+  `categoria` text NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -55,11 +55,11 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` text NOT NULL,
   `documento` int(11) NOT NULL,
-  `email` text COLLATE utf8_spanish_ci NOT NULL,
-  `telefono` text COLLATE utf8_spanish_ci NOT NULL,
-  `direccion` text COLLATE utf8_spanish_ci NOT NULL,
+  `email` text NOT NULL,
+  `telefono` text NOT NULL,
+  `direccion` text NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `compras` int(11) NOT NULL,
   `ultima_compra` datetime NOT NULL,
@@ -79,15 +79,76 @@ INSERT INTO `clientes` (`id`, `nombre`, `documento`, `email`, `telefono`, `direc
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `correo_fundacion`
+--
+
+CREATE TABLE `correo_fundacion` (
+  `id` int(11) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `correo_fundacion`
+--
+
+INSERT INTO `correo_fundacion` (`id`, `correo`, `id_informacion`) VALUES
+(1, 'fundnuevoporvenir@gmail.com', 1),
+(2, 'diegoyanez1@gmail.com', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `direccion_fundacion`
+--
+
+CREATE TABLE `direccion_fundacion` (
+  `id` int(11) NOT NULL,
+  `direccion` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `direccion_fundacion`
+--
+
+INSERT INTO `direccion_fundacion` (`id`, `direccion`, `id_informacion`) VALUES
+(1, 'Oficina Sur: O’Leary N° Oe8-103 y Punaes', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `informacion_fundacion`
+--
+
+CREATE TABLE `informacion_fundacion` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `mision` longtext NOT NULL,
+  `vision` longtext NOT NULL,
+  `quienes_somos` longtext NOT NULL,
+  `logo` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `informacion_fundacion`
+--
+
+INSERT INTO `informacion_fundacion` (`id`, `nombre`, `mision`, `vision`, `quienes_somos`, `logo`) VALUES
+(1, 'Fundación Nuevo Porvenir', 'Somos una fundación orientada a promover el Desarrollo Integral de la comunidad, las \r\ninstituciones y las empresas ecuatorianas, brindando productos servicios de soporte y \r\nacompañamiento empresarial, capacitación y consultoría para la gestión, acceso a las \r\ntecnologías de información y construcción de redes de negocios.  Contamos con Talento \r\nHumano  de  excelencia  e  infraestructura  física  y  tecnológica  de  última  generación; trabajamos  con  ética,  solidaridad,  equidad,  compromiso,  calidad  y  responsabilidad \r\nsocial.', 'Convertirnos  en  una  organización  de  vanguardia  con  reconocimiento  nacional  e \r\ninternacional  que  busca  desarrollar  soluciones  innovadoras  para  mejorar  la \r\nproductividad Integral de la comunidad, las instituciones y las empresas ecuatorianas y \r\ndel mundo.', 'La Fundación Nuevo Porvenir, es una organización orientada a Servir a las personas de \r\nnuestra comunidad, las instituciones, las empresas del Ecuador y del mundo. Nuestro \r\ninterés es lograr la satisfacción de sus necesidades con productos y servicios de calidad.', 'vistas/img/logo/logo.jpeg');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
-  `codigo` text COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
-  `imagen` text COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` text NOT NULL,
   `stock` int(11) NOT NULL,
   `precio_compra` float NOT NULL,
   `precio_venta` float NOT NULL,
@@ -165,16 +226,37 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `telefono_fundacion`
+--
+
+CREATE TABLE `telefono_fundacion` (
+  `id` int(11) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
+  `id_informacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `telefono_fundacion`
+--
+
+INSERT INTO `telefono_fundacion` (`id`, `telefono`, `id_informacion`) VALUES
+(1, '023171516', 1),
+(2, '0999408469', 1),
+(3, '0998735356', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
-  `usuario` text COLLATE utf8_spanish_ci NOT NULL,
-  `password` text COLLATE utf8_spanish_ci NOT NULL,
-  `perfil` text COLLATE utf8_spanish_ci NOT NULL,
-  `foto` text COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` text NOT NULL,
+  `usuario` text NOT NULL,
+  `password` text NOT NULL,
+  `perfil` text NOT NULL,
+  `foto` text NOT NULL,
   `estado` int(11) NOT NULL,
   `ultimo_login` datetime NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -186,9 +268,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`, `estado`, `ultimo_login`, `fecha`) VALUES
 (1, 'Administrador', 'admin', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/admin/649.jpg', 1, '2023-01-26 16:56:49', '2023-01-26 21:56:49'),
-(57, 'Lucas Juan Hernández', 'juan', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/juan/802.jpg', 1, '2022-12-22 13:11:16', '2022-12-22 18:14:26'),
+(57, 'Lucas Juan Hernández', 'juan', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'vistas/img/usuarios/juan/802.jpg', 1, '2023-03-02 12:42:32', '2023-03-02 17:42:32'),
 (58, 'Daniel Julio García', 'julio', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'Administrador', 'vistas/img/usuarios/julio/728.jpg', 1, '2022-12-22 13:12:51', '2022-12-22 18:12:51'),
-(59, 'Abel Ana Martínez', 'ana', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Especial', 'vistas/img/usuarios/ana/678.jpg', 1, '2023-01-26 16:52:07', '2023-01-26 21:52:07');
+(59, 'Abel Ana Martínez', 'ana', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Especial', 'vistas/img/usuarios/ana/678.jpg', 1, '2023-03-02 12:42:17', '2023-03-02 17:42:17');
 
 -- --------------------------------------------------------
 
@@ -201,11 +283,11 @@ CREATE TABLE `ventas` (
   `codigo` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `id_vendedor` int(11) NOT NULL,
-  `productos` text COLLATE utf8_spanish_ci NOT NULL,
+  `productos` text NOT NULL,
   `impuesto` float NOT NULL,
   `neto` float NOT NULL,
   `total` float NOT NULL,
-  `metodo_pago` text COLLATE utf8_spanish_ci NOT NULL,
+  `metodo_pago` text NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -243,10 +325,37 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
+
+--
+-- Indices de la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
+
+--
+-- Indices de la tabla `informacion_fundacion`
+--
+ALTER TABLE `informacion_fundacion`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_informacion` (`id_informacion`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -277,10 +386,34 @@ ALTER TABLE `clientes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT de la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `informacion_fundacion`
+--
+ALTER TABLE `informacion_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT de la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -293,6 +426,28 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `ventas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `correo_fundacion`
+--
+ALTER TABLE `correo_fundacion`
+  ADD CONSTRAINT `correo_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
+
+--
+-- Filtros para la tabla `direccion_fundacion`
+--
+ALTER TABLE `direccion_fundacion`
+  ADD CONSTRAINT `direccion_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
+
+--
+-- Filtros para la tabla `telefono_fundacion`
+--
+ALTER TABLE `telefono_fundacion`
+  ADD CONSTRAINT `telefono_fundacion_ibfk_1` FOREIGN KEY (`id_informacion`) REFERENCES `informacion_fundacion` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

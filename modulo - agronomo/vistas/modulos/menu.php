@@ -137,19 +137,33 @@
 						<a href="reportes"  style="background-color:#330470;font-weight: bold;">
 							
 							<i class="fa fa-circle-o" style="color:#FF5822"></i>
-							<span style="color:#FF5822">Reporte </span>
+							<span style="color:#FF5822">Reporte</span>
 
 						</a>
 
 					</li>';
 
 					}
-
 				
 
 				echo '</ul>
 
 			</li>';
+
+		}
+		if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Agrónomo") {
+
+			echo '
+	<li>
+
+		<a href="informacion-fundacion"  style="background-color:#615e9b; color:azure;">
+
+		<i class="fa fa-globe"></i>
+			<span><strong>Página estática</strong></span>
+
+		</a>
+
+	</li>';
 
 		}
 
